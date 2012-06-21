@@ -1,7 +1,7 @@
 opam-version: "1"
 
 package "uri" {
-  version:    "0.3"
+  version:    "0.3dev"
   maintainer: "anil@recoil.org"
   build: [
     [ "make" "all" ]
