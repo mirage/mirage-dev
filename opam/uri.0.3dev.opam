@@ -1,0 +1,12 @@
+opam-version: "1"
+
+package "uri" {
+  version:    "0.3"
+  maintainer: "anil@recoil.org"
+  build: [
+    [ "make" "all" ]
+    [ "make" "install" ]
+  ]
+  remove: [ "ocamlfind" "remove" "uri" ]
+  depends: [ "ocamlfind" "re" ]
+}
