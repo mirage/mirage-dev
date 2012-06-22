@@ -8,5 +8,5 @@ package "cow" {
     [ "make" "install" ]
   ]
   remove: [ "ocamlfind" "remove" "cow" ]
-  depends: [ "ocamlfind" "dyntype" {>="0.8.1"} ]
+  depends: [ "ocamlfind" "dyntype" {>="0.8.1"} "ulex" "re" ]
 }
