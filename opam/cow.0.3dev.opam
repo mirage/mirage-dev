@@ -1,0 +1,12 @@
+opam-version: "1"
+
+package "cow" {
+  version:    "0.3dev"
+  maintainer: "anil@recoil.org"
+  build: [
+    [ "make" "all" ]
+    [ "make" "install" ]
+  ]
+  remove: [ "ocamlfind" "remove" "cow" ]
+  depends: [ "ocamlfind" "dyntype" ]
+}
