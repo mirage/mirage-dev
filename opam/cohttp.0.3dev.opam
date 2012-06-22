@@ -8,5 +8,5 @@ package "cohttp" {
     [ "make" "install" ]
   ]
   remove: [ "ocamlfind" "remove" "cohttp" ]
-  depends: [ "ocamlfind" "cohttp" ]
+  depends: [ "ocamlfind" "uri" "re" "mirage-net" ]
 }
