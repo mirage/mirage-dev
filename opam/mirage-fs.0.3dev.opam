@@ -5,7 +5,6 @@ package "mirage-fs" {
   maintainer: "anil@recoil.org"
   build: [
     [ "make" "all" ]
-    [ "make" "install" ]
   ]
   depends: [ ]
 }
