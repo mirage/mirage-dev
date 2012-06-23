@@ -1,6 +1,6 @@
 opam-version: "1"
 
-package "mirage" {
+package "mirage-fs" {
   version:    "0.3dev"
   maintainer: "anil@recoil.org"
   build: [
