@@ -6,5 +6,4 @@ package "mirage-fs" {
   build: [
     [ "make" "all" ]
   ]
-  depends: [ ]
 }
