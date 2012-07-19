@@ -7,6 +7,5 @@ package "signpostd" {
     [ "make" "all" ]
     [ "make" "install" ]
   ]
-  remove: [ ]
-  depends: [ "oasis" "dns" "openflow" "crypto_keys" ]
+  depends: [ "oasis" "dns" "crypto_keys" "bitstring" "ocamlgraph" ] 
 }
