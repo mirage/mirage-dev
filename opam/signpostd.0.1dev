@@ -1,0 +1,12 @@
+opam-version: "1"
+
+package "signpostd" {
+  version:    "0.1dev"
+  maintainer: "mort@cantab.net"
+  build: [
+    [ "make" "all" ]
+    [ "make" "install" ]
+  ]
+  remove: [ ]
+  depends: [ "oasis" "dns" "openflow" "crypto_keys" ]
+}
