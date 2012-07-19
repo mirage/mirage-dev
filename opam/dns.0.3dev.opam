@@ -8,5 +8,5 @@ package "dns" {
     [ "make" "install" ]
   ]
   remove: [ "ocamlfind" "remove" "dns" ]
-  depends: [ "ocamlfind" "cstruct" "lwt" "re" "uri" ]
+  depends: [ "oasis" "ocamlfind" "cstruct" "lwt" "re" "uri" ]
 }
