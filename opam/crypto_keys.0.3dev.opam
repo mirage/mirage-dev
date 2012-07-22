@@ -5,5 +5,5 @@ package "crypto_keys" {
   maintainer: "anil@recoil.org"
   build: [["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%"] ["ocaml" "setup.ml" "-build"] ["ocaml" "setup.ml" "-install"]]
   remove: [ "ocamlfind" "remove" "crypto_keys" ]
-  depends: [ "ocamlfind" "dns" "cryptokit" ]
+  depends: [ "getopt" "ocamlfind" "dns" "cryptokit" ]
 }
