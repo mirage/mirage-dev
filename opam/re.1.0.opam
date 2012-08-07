@@ -4,8 +4,9 @@ package "re" {
   version:    "1.0"
   maintainer: "anil@recoil.org"
   build: [
-    [ "make" "all" ]
-    [ "make" "install" ]
+    ["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%"] 
+    ["ocaml" "setup.ml" "-build"] 
+    ["ocaml" "setup.ml" "-install"]
   ]
   remove: [ "ocamlfind" "remove" "re" ]
   depends: [ "ocamlfind" ]
