@@ -4,8 +4,9 @@ package "uri" {
   version:    "0.3dev"
   maintainer: "anil@recoil.org"
   build: [
-    [ "make" "all" ]
-    [ "make" "install" ]
+    ["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%"] 
+    ["ocaml" "setup.ml" "-build"] 
+    ["ocaml" "setup.ml" "-install"]
   ]
   remove: [ "ocamlfind" "remove" "uri" ]
   depends: [ "ocamlfind" "re" ]
