@@ -7,4 +7,4 @@ build: [
 remove: [
   ["ocamlfind" "remove" "mirage"]
 ]
-depends: ["cstruct" "ocamlfind"]
+depends: ["cstruct" "ocamlfind" "lwt"]
