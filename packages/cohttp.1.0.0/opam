@@ -7,4 +7,5 @@ build: [
 remove: [
   ["ocamlfind" "remove" "cohttp"]
 ]
-depends: [ "ocamlfind" "re" "uri" "ounit" ]
+depends: [ "ocamlfind" "re" "uri" "cow" "ounit" ]
+depopts: [ "async" "lwt" "mirage-net" ]
