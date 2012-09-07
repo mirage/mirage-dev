@@ -4,4 +4,4 @@ build: [
   ["make" "all"]
 ]
 remove: [ ]
-depends: [ "mirage-fs" "ocamlfind" "cohttp" "mirage" "re" "cow" ] 
+depends: [ "mirage-net" "mirage-fs" "ocamlfind" "cohttp" "mirage" "re" "cow" ] 
