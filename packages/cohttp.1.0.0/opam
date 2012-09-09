@@ -1,9 +1,8 @@
 opam-version: "1"
 maintainer: "anil@recoil.org"
 build: [
-  ["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%" "--%{lwt:enable}%-lwt" "--%{mirage-net:enable}%-mirage" "--%{async:enable}%-async" ]
-  ["ocaml" "setup.ml" "-build"]
-  ["ocaml" "setup.ml" "-install"]
+  ["make" "PREFIX=%{prefix}%"]
+  ["make" "PREFIX=%{prefix}%" "install"]
 ]
 remove: [
   ["ocamlfind" "remove" "cohttp"]
