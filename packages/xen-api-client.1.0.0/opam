@@ -7,4 +7,4 @@ build: [
 remove: [ 
   ["ocamlfind" "remove" "xen-api-client"]
 ]
-depends: [ "ocamlfind" "lwt" "ounit" "cohttp" "uri" "xmlm" ] 
+depends: [ "ocamlfind" "lwt" "ssl" "ounit" "cohttp" "uri" "xmlm" ] 
