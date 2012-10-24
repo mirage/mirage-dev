@@ -2,7 +2,7 @@ opam-version: "1"
 maintainer: "anil@recoil.org"
 build: [
   ["make" "all"]
-  ["make" "install"]
+  ["make" "install" "PREFIX=%{prefix}%"]
 ]
 remove: [
   ["ocamlfind" "remove" "mirage"]
