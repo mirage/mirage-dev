@@ -9,4 +9,4 @@ build: [
 remove: [
   ["ocamlfind" "remove" "sulci"]
 ]
-depends: ["ocamlfind" "oasis" "erm_treap" "erm_dehtml" "pcre-ocaml" "sqlite3-ocaml" "ulex" "erm_brainfuck" "erm_logger" "erm_scheduler" "erm_xmpp" "cryptokit" "ocamlnet" "dbm" "json-static" ]
+depends: ["ocamlfind" "oasis" "erm_treap" "erm_strftime" "erm_dehtml" "pcre-ocaml" "sqlite3-ocaml" "ulex" "erm_brainfuck" "erm_logger" "erm_scheduler" "erm_xmpp" "cryptokit" "ocamlnet" "dbm" "json-static" ]

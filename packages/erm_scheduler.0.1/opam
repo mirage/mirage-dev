@@ -1,7 +1,6 @@
 opam-version: "1"
 maintainer: "anil@recoil.org"
 build: [
-  ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure" "--prefix" "%{prefix}%"]
   ["ocaml" "setup.ml" "-build"]
   ["ocaml" "setup.ml" "-install"]
@@ -9,4 +8,4 @@ build: [
 remove: [
   ["ocamlfind" "remove" "erm_scheduler"]
 ]
-depends: ["ocamlfind" "oasis"]
+depends: ["ocamlfind"]
