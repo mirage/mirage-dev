@@ -7,4 +7,4 @@ build: [
 remove: [
   ["ocamlfind" "remove" "mirage"]
 ]
-depends: ["cstruct" "ocamlfind" "lwt" "xenstore"]
+depends: ["cstruct" "ocamlfind" "lwt" "xenstore" "shared-memory-ring"]
