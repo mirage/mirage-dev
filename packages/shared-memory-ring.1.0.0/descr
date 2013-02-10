@@ -1,2 +1,0 @@
-Shared memory rings for RPC and bytestream communications. Includes
-concrete implementations of xen "console" and "xenstore" rings.
