@@ -1,7 +1,0 @@
-opam-version: "1"
-maintainer: "anil@recoil.org"
-build: [
-  ["make" "all"]
-]
-remove: [ ]
-depends: [ "mirage-net" "mirage-fs" "ocamlfind" "cohttp" "mirage" "re" "cow" ] 
