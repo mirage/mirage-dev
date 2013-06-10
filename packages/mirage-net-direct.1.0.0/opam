@@ -1,0 +1,10 @@
+opam-version: "1"
+maintainer: "anil@recoil.org"
+build: [
+  ["make" "direct-build" "PREFIX=%{prefix}%"]
+  ["make" "direct-install" "PREFIX=%{prefix}%"]
+]
+remove: [
+  ["ocamlfind" "remove" "mirage-net"]
+]
+depends: ["mirage" "ocamlfind"]
