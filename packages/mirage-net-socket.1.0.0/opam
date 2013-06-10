@@ -8,4 +8,4 @@ remove: [
   ["ocamlfind" "remove" "mirage-net"]
 ]
 depends: ["mirage" "ocamlfind"]
-conflicts: ["mirage-xen"]
+conflicts: ["mirage-xen" "mirage-net-direct"]

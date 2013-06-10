@@ -8,3 +8,4 @@ remove: [
   ["ocamlfind" "remove" "mirage-net"]
 ]
 depends: ["mirage" "ocamlfind"]
+conflicts: ["mirage-net-socket"]
