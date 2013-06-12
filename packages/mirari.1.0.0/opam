@@ -3,4 +3,4 @@ maintainer: "anil@recoil.org"
 build: [
   [make]
 ]
-depends: ["cmdliner" "obuild"]
+depends: ["cmdliner" "obuild" "tuntap" "fd-send-recv"]
