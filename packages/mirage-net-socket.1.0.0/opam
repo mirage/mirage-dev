@@ -7,5 +7,5 @@ build: [
 remove: [
   ["ocamlfind" "remove" "mirage-net"]
 ]
-depends: ["mirage" "ocamlfind"]
+depends: ["mirage" {="1.0.0"} "ocamlfind"]
 conflicts: ["mirage-xen" "mirage-net-direct"]
