@@ -28,4 +28,4 @@ conflicts: [
   "async_ssl" {<"111.21.00"}
   "mirage-types" {<"2.0.0"}
 ]
-ocaml-version: [>="4.00.1"]
+ocaml-version: [>="4.01.0"]
