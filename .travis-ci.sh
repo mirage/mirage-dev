@@ -22,9 +22,11 @@ TARGETS="mirage-http mirage"
 case "$OCAML_VERSION" in
   4.01.0)
     opam install ${TARGETS}
+  ;;
   4.02.0)
     opam switch 4.02.0+rc1
     opam install ${TARGETS}
+  ;;
   *)
     echo "Nothing to do";
     exit 1 ;;
