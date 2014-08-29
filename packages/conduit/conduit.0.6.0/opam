@@ -12,6 +12,8 @@ depends: [
   "ocamlfind"
   "sexplib" {>="109.15.00"}
   "stringext"
+  "uri"
+  "cstruct" {>="1.0.1"}
 ]
 depopts: [
   "async"
