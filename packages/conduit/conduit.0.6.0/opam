@@ -20,7 +20,7 @@ depopts: [
   "lwt"
   ("lwt" & "ssl")
   "async_ssl"
-  ("mirage-types" & "dns")
+  ("mirage-types" & "dns" & "tcpip")
 ]
 conflicts: [
   "async" {<"109.15.00"}
