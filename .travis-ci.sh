@@ -31,3 +31,9 @@ case "$OCAML_VERSION" in
     echo "Nothing to do";
     exit 1 ;;
 esac
+
+git clone -b mirage2 git://github.com/mirage/mirage-skeleton
+cd mirage-skeleton
+make configure
+make depend
+make build
