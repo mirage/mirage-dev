@@ -32,6 +32,7 @@ case "$OCAML_VERSION" in
     exit 1 ;;
 esac
 
+eval `opam config env`
 git clone -b mirage2 git://github.com/avsm/mirage-skeleton
 cd mirage-skeleton
 make configure
