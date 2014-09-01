@@ -1,7 +1,7 @@
 # Install OCaml and OPAM PPAs
 case "$OCAML_VERSION" in
   4.01.0) ppa=avsm/ocaml41+opam11 ;;
-  4.02.0) ppa=avsm/ocaml41+opam11 ;;
+  4.02.0) ppa=avsm/ocaml42+opam11 ;;
   *) echo Unknown $OCAML_VERSION; exit 1 ;;
 esac
 
@@ -18,16 +18,10 @@ opam init git://github.com/ocaml/opam-repository >/dev/null 2>&1
 opam repo add mirage-dev .
 
 TARGETS="mirage-http mirage"
-
-case "$OCAML_VERSION" in
-  4.01.0)
-    opam install ${TARGETS}
-  ;;
-  4.02.0)
-    opam switch 4.02.0+rc1
-    opam install ${TARGETS}
-  ;;
-  *)
-    echo "Nothing to do";
-    exit 1 ;;
-esac
+opam install ${TARGETS}
+eval `opam config env`
+git clone -b mirage2 git://github.com/avsm/mirage-skeleton
+cd mirage-skeleton
+make configure
+make depend
+make build
