@@ -32,7 +32,7 @@ case "$OCAML_VERSION" in
     exit 1 ;;
 esac
 
-git clone -b mirage2 git://github.com/mirage/mirage-skeleton
+git clone -b mirage2 git://github.com/avsm/mirage-skeleton
 cd mirage-skeleton
 make configure
 make depend
