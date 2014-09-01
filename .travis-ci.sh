@@ -24,7 +24,7 @@ case "$OCAML_VERSION" in
     opam install ${TARGETS}
   ;;
   4.02.0)
-    opam switch 4.02.0+rc1
+    opam switch 4.02.0
     opam install ${TARGETS}
   ;;
   *)
