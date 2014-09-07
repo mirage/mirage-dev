@@ -17,5 +17,5 @@ depends: [
   "xen-gnt" {>="0.9.9"}
   "mirage-xen-minios"
 ]
-ocaml-version: [>= "4.00.0"]
+ocaml-version: [>= "4.00.0" & < "4.02.0"]
 os: ["linux"]
