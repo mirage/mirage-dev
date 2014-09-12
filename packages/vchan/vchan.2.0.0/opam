@@ -7,6 +7,7 @@ authors: [
 homepage: "http://github.com/mirage/ocaml-vchan"
 license: "ISC"
 build: [
+  ["./configure"]
   [make]
   [make "install"]
 ]
