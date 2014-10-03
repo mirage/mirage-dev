@@ -22,7 +22,7 @@ depopts: [
   "lwt"
   ("lwt" & "ssl")
   "async_ssl"
-  ("mirage-types" & "dns" & "tcpip")
+  ("mirage-types" & "dns" & "tcpip" & "vchan")
 ]
 conflicts: [
   "async" {<"109.15.00"}

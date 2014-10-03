@@ -1,0 +1,14 @@
+opam-version: "1"
+version: "2.0.0"
+maintainer: "anil@recoil.org"
+tags: [
+  "org:mirage"
+]
+build: [ ]
+depends: [
+  "mirage-types" 
+  "dns"
+  "tcpip"
+  "vchan"
+]
+ocaml-version: [>="4.01.0"]
