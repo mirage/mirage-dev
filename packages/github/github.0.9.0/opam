@@ -20,4 +20,5 @@ depends: [
   "stringext"
   "lambda-term"
   "cmdliner"
+  "js_of_ocaml" {>="2.4.0"}
 ]
