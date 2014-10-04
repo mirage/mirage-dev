@@ -17,7 +17,7 @@ export OPAMYES=1
 opam init git://github.com/ocaml/opam-repository >/dev/null 2>&1
 opam repo add mirage-dev .
 
-TARGETS="mirage-http mirage mirage-xen"
+TARGETS="mirage-http mirage mirage-xen github"
 opam install ${TARGETS}
 eval `opam config env`
 git clone -b mirage2 git://github.com/avsm/mirage-skeleton
