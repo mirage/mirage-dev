@@ -8,6 +8,7 @@ remove: [
   [make "PREFIX=%{prefix}%" "uninstall"]
 ]
 depends: [
+  "oasis"
   "ounit"
   "cstruct" {>= "1.0.1"}
   "io-page"
