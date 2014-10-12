@@ -19,3 +19,6 @@ depends: [
 ]
 ocaml-version: [>= "4.00.0" & < "4.02.0"]
 os: ["linux"]
+depexts: [
+  [["ubuntu"] ["pkg-config"]]
+]
