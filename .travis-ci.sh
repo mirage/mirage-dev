@@ -21,7 +21,7 @@ opam update -u
 TARGETS="mirage-http mirage mirage-xen github"
 opam install ${TARGETS}
 eval `opam config env`
-git clone -b mirage2 git://github.com/avsm/mirage-skeleton
+git clone git://github.com/avsm/mirage-skeleton
 cd mirage-skeleton
 make configure
 make depend
