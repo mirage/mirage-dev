@@ -9,7 +9,7 @@ build: [
   [make "install"]
 ]
 remove: [
-  [make "uninstall"]
+  ["ocamlfind" "remove" "mirage-console"]
 ]
 depends: [
   "ocamlfind"
