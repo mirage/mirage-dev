@@ -5,12 +5,21 @@ tags: [
   "org:xapi-project"
 ]
 build: [
-  [make "xen-build"]
-  [make "xen-install"]
+  [make]
+  [make "install"]
 ]
-remove: ["ocamlfind" "remove" "mirage-console-xen"]
+remove: [
+  ["ocamlfind" "remove" "mirage-console"]
+]
 depends: [
   "ocamlfind"
   "mirage-types" {>="1.1.0"}
+  "mirage-unix" {>="1.1.0"}
+]
+depopts: [
   "mirage-xen" {>="1.1.0"}
+]
+conflicts: [
+  "mirage-console-unix"
+  "mirage-console-xen"
 ]
