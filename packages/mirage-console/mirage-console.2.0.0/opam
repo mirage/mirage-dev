@@ -19,3 +19,7 @@ depends: [
 depopts: [
   "mirage-xen" {>="1.1.0"}
 ]
+conflicts: [
+  "mirage-console-unix"
+  "mirage-console-xen"
+]
