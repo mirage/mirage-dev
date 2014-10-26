@@ -6,9 +6,10 @@ tags: [
 ]
 build: [ ]
 depends: [
-  "mirage-types" 
+  "mirage-types" {>="2.0.0"}
   "dns"
   "tcpip"
   "vchan"
+  "conduit"
 ]
 ocaml-version: [>="4.01.0"]
