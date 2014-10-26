@@ -30,6 +30,7 @@ depends: [
   "lwt" {>= "2.4.3"}
   "cstruct" {>= "1.0.1"}
   "io-page" {>= "1.0.0"}
+  "crunch"
   "sexplib"
 ]
 ocaml-version: [>="4.00.1"]
