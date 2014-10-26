@@ -7,7 +7,7 @@ build: [
 remove: [[make "uninstall"]]
 depends: [
   "ocamlfind"
-  "mirage-types" {>= "2.0.0"}
+  "mirage-types-lwt" {>= "2.0.0"}
   "conduit-mirage"
   "lwt" {>= "2.4.3"}
   "cohttp" {>= "0.12.0"}

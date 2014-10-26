@@ -13,7 +13,7 @@ remove: [
 ]
 depends: [
   "ocamlfind"
-  "mirage-types" {>="1.1.0"}
+  "mirage-types-lwt"
   "mirage-unix" {>="1.1.0"}
 ]
 depopts: [
