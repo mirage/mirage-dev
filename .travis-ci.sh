@@ -13,7 +13,6 @@ echo OCaml version
 ocaml -version
 
 export OPAMYES=1
-export OPAMJOBS=2
 
 opam init git://github.com/ocaml/opam-repository >/dev/null 2>&1
 opam repo add mirage-dev .
