@@ -18,7 +18,7 @@ opam init git://github.com/ocaml/opam-repository >/dev/null 2>&1
 opam repo add mirage-dev .
 opam update -u
 
-TARGETS="mirage-http mirage mirage-xen github dns"
+TARGETS="mirage-http mirage mirage-xen github dns tls"
 opam install ${TARGETS}
 eval `opam config env`
 git clone git://github.com/mirage/mirage-skeleton
