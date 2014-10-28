@@ -7,7 +7,7 @@ esac
 
 echo "yes" | sudo add-apt-repository ppa:$ppa
 sudo apt-get update -qq
-sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam time
+sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam time libgmp-dev
 
 echo OCaml version
 ocaml -version
@@ -18,7 +18,7 @@ opam init git://github.com/ocaml/opam-repository >/dev/null 2>&1
 opam repo add mirage-dev .
 opam update -u
 
-TARGETS="mirage-http mirage mirage-xen github dns"
+TARGETS="mirage-http mirage mirage-xen github dns tls"
 opam install ${TARGETS}
 eval `opam config env`
 git clone git://github.com/mirage/mirage-skeleton
