@@ -18,7 +18,7 @@ depends: [
   "mirage-http" {>= "1.1.0"}
   "mirage-block-unix" {>= "1.2.0"}
   "mirage-fs-unix" {>= "1.0.0"}
-  "mirage-console-unix" {>= "1.0.0"}
-  "cohttp" {>="0.10.0"}
+  "mirage-console"
+  "cohttp" {>="0.12.0"}
 ]
 ocaml-version: [>= "4.00.0"]
