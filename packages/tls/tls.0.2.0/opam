@@ -25,5 +25,6 @@ depends: [
 ]
 depopts: [
   "lwt"
-  "mirage" {>= "2.0.0"}
+  "mirage"
 ]
+conflicts: [ "mirage" {<"2.0.0"} ]
