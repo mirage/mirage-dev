@@ -1,1 +1,2 @@
-git: "git://github.com/mirage/cowabloga"
+archive: "https://github.com/mirage/cowabloga/archive/v0.0.8.tar.gz"
+checksum: "90dd8b095ef9264537e7441ea300e062"
