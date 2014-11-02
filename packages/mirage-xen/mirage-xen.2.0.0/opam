@@ -16,9 +16,7 @@ depends: [
   "xen-evtchn" {>="0.9.9"}
   "xen-gnt" {>="2.0.0"}
   "mirage-xen-minios"
+  "conf-pkg-config"
 ]
 ocaml-version: [>= "4.00.0" & < "4.02.0"]
 os: ["linux"]
-depexts: [
-  [["ubuntu"] ["pkg-config"]]
-]
