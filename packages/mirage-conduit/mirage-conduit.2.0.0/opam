@@ -4,12 +4,14 @@ maintainer: "anil@recoil.org"
 tags: [
   "org:mirage"
 ]
-build: [ ]
+build: [
+ [ "ocamlfind" "query" "conduit.mirage" ]
+]
 depends: [
   "mirage-types" {>="2.0.0"}
-  "dns"
+  "mirage-dns" {>="2.0.0"}
   "tcpip"
   "vchan"
-  "conduit"
+  "conduit" {>="0.6.0"}
 ]
 ocaml-version: [>="4.01.0"]
