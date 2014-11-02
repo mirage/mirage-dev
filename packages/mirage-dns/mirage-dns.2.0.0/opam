@@ -1,7 +1,7 @@
 opam-version: "1"
 maintainer: "anil@recoil.org"
 build: [ 
- "ocamlfind" "query" "dns.mirage"
+  [ "ocamlfind" "query" "dns.mirage" ]
 ]
 remove: []
 depends: [
