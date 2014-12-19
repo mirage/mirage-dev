@@ -1,12 +1,9 @@
 opam-version: "1"
 maintainer: "contact@ocamlpro.com"
-build: [
-  ["./configure"]
-  [make]
-  [make "install"]
-]
+patches: ["xen_linkopts.patch"]
+build: ["./mirage-install.sh"]
 remove: [["ocamlfind" "remove" "zarith"]]
 depends: [
-  "conf-gmp"
+  "gmp"
   "ocamlfind"
 ]
