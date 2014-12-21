@@ -16,6 +16,11 @@ depends: [
   "shared-memory-ring"
   "cmdliner"
   "cstruct"
+  "mirage-clock-unix"
+  "mirage-types"
+  "ipaddr"
+  "uri"
+  "stringext"
 ]
 depexts: [
   [["debian"] ["libxen-dev" "uuid-dev"]]
