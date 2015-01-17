@@ -4,6 +4,7 @@ PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig"
 export PKG_CONFIG_PATH
 
 make install -C unix
+mkdir -p "$PREFIX/lib/pkgconfig"
 cp gmp.pc "$PREFIX/lib/pkgconfig/"
 
 ocamlfind install gmp META
