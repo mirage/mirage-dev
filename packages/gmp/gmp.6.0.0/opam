@@ -13,6 +13,9 @@ remove: [
       "%{prefix}%/lib/pkgconfig/gmp.pc"
       "%{prefix}%/lib/gmp" ]
  ]
+depends: [
+  "ocamlfind"
+]
 depopts: [
   "mirage-xen"
 ]
