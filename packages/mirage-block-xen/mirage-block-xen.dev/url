@@ -1,2 +1,1 @@
-archive: "https://github.com/talex5/mirage-block-xen.git#connect"
-checksum: "eb4c40337747dd0c6c61c9a0414c4bc8"
+archive: "https://github.com/mirage/mirage-block-xen.git"
