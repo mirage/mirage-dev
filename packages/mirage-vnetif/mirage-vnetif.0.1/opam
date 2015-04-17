@@ -16,7 +16,7 @@ remove: [
 ]
 depends: [ 
   "lwt"
-  "mirage-types"
+  "mirage-types" { >= "2.2.0" }
   "cstruct"
   "ipaddr"
   "io-page"
