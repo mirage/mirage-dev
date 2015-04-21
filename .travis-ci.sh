@@ -24,5 +24,4 @@ eval `opam config env`
 git clone git://github.com/mirage/mirage-skeleton
 cd mirage-skeleton
 make configure
-make depend
 make build
