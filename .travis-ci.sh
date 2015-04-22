@@ -21,7 +21,10 @@ opam update -u
 TARGETS="mirage-http mirage mirage-xen github dns tls mirage-profile"
 opam install ${TARGETS}
 eval `opam config env`
-git clone git://github.com/mirage/mirage-skeleton
+git clone git://github.com/talex5/mirage-skeleton -b tls
 cd mirage-skeleton
 make configure
 make build
+make clean
+make configure MODE=xen
+make build MODE=xen
