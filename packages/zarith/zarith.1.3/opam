@@ -4,6 +4,7 @@ patches: ["xen_linkopts.patch"]
 build: ["./mirage-install.sh"]
 remove: [["ocamlfind" "remove" "zarith"]]
 depends: [
-  "gmp"
+  ("mirage-no-xen" | ("mirage-xen" & "gmp-xen"))
+  "conf-gmp"
   "ocamlfind"
 ]

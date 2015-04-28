@@ -3,7 +3,7 @@ exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
 
-Name: gmp
+Name: gmp-xen
 Version: 6.0.0
 URL: https://gmplib.org
 Description: The GNU Multiple Precision Arithmetic Library
