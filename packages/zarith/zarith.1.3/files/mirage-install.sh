@@ -1,14 +1,10 @@
 #!/bin/sh -eux
 
-./configure
-make
-make install
+PREFIX=`opam config var prefix`
+PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig"
+export PKG_CONFIG_PATH
 
 if pkg-config --exists mirage-xen; then
-  PREFIX=`opam config var prefix`
-  PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig"
-  export PKG_CONFIG_PATH
-
   LDFLAGS=`pkg-config --libs gmp-xen`
   export LDFLAGS
 
