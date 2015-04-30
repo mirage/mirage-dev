@@ -15,5 +15,5 @@ if pkg-config --exists mirage-xen; then
   export CFLAGS
   ./configure
   make
-  cp libzarith.a "$PREFIX/lib/zarith/libzarith_xen.a"
+  cp libzarith.a "$PREFIX/lib/zarith/libzarith-xen.a"
 fi
