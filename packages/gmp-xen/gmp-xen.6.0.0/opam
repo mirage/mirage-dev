@@ -1,5 +1,5 @@
 opam-version: "1.2"
-name: "gmp"
+name: "gmp-xen"
 version: "6.0.0"
 maintainer: "Thomas Leonard <talex5@gmail.com>"
 homepage: "https://gmplib.org/"
@@ -13,6 +13,6 @@ remove: [
       "%{prefix}%/lib/pkgconfig/gmp.pc"
       "%{prefix}%/lib/gmp" ]
  ]
-depopts: [
+depends: [
   "mirage-xen"
 ]
