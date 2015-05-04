@@ -4,7 +4,7 @@ patches: ["xen_linkopts.patch"]
 build: [
   ["./configure"]
   [make]
-  [make install]
+  [make "install"]
   ["./mirage-install.sh"]
 ]
 remove: [["ocamlfind" "remove" "zarith"]]
