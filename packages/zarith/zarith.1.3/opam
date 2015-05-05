@@ -9,6 +9,6 @@ build: [
 ]
 remove: [["ocamlfind" "remove" "zarith"]]
 depends: [
-  ("mirage-no-xen" | ("mirage-xen" & "gmp"))
+  ("mirage-no-xen" | ("mirage-xen" & "gmp-xen"))
   "ocamlfind"
 ]
