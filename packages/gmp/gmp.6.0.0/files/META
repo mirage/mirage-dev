@@ -1,0 +1,4 @@
+version = "6.0.0"
+description = "The GNU Multiple Precision Arithmetic Library"
+linkopts = "-cclib -lgmp"
+xen_linkopts = "-lgmp_xen"
