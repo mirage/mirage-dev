@@ -12,5 +12,5 @@ remove: [
     "%{prefix}%/lib/gmp-xen"
 ]
 depends: [
-  "mirage-xen"
+  "mirage-xen-posix"
 ]
