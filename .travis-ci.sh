@@ -33,3 +33,6 @@ git clone git://github.com/mirage/mirage-skeleton
 cd mirage-skeleton
 make configure
 make build
+make clean
+make configure MODE=xen
+make build MODE=xen
