@@ -10,7 +10,7 @@ CPPFLAGS="$CPPFLAGS `pkg-config mirage-xen-posix --cflags` -O2 -pedantic -fomit-
 # Use -Werror=missing-prototypes because we're not running the tests due to cross-compiling.
 HOST="`uname -m`-unknown-none"
 BUILD=`./config.guess`
-./configure --host="$HOST" --build="$BUILD" CC=gcc --prefix="$PREFIX/lib/gmp-xen" --disable-shared CPPFLAGS="$CPPFLAGS"
+./configure --host="$HOST" --build="$BUILD" --enable-fat CC=gcc --prefix="$PREFIX/lib/gmp-xen" --disable-shared CPPFLAGS="$CPPFLAGS"
 # Because we're cross-compiling, configurate can't tell whether a function
 # actually exists and just assumes they all do. For localeconv, this is wrong.
 sed -e '/HAVE_LOCALECONV/d'  \
