@@ -11,8 +11,6 @@ depends: [
   "mirage-types" {>= "2.0.0"}
   "mirage-dns" {>= "2.0.0"}
   "tcpip"
-  "vchan"
-  "conduit" {>= "0.8.0"}
-  "tls" {>= "0.5.0"}
+  "conduit" {>= "0.8.4"}
 ]
 available: [ocaml-version >="4.01.0"]
