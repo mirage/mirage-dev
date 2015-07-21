@@ -1,0 +1,4 @@
+lib: [ 
+  "libz.a"  {"libz-xen.a"} 
+  "zlib.pc" {"../pkgconfig/zlib-xen.pc"}
+]
