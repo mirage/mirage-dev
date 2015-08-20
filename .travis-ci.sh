@@ -36,13 +36,3 @@ make build
 make clean
 make configure MODE=xen
 make build MODE=xen
-
-#### TMP: irmin + xen
-
-git clone git://github.com/samoht/mirmin
-(cd mirmin/git && \
-    mirage configure --xen && \
-    make )
-(cd mirmin/irmin && \
-    mirage configure --xen && \
-    make )
