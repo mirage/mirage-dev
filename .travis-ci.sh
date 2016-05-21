@@ -1,7 +1,6 @@
 # Install OCaml and OPAM PPAs
 case "$OCAML_VERSION" in
-  4.01.0) ppa=avsm/ocaml41+opam12 ;;
-  4.02.0) ppa=avsm/ocaml42+opam12 ;;
+  4.02) ppa=avsm/ocaml42+opam12 ;;
   *) echo Unknown $OCAML_VERSION; exit 1 ;;
 esac
 
@@ -29,8 +28,7 @@ opam update -u
 TARGETS="mirage-http mirage mirage-xen github dns tls mirage-profile"
 opam install ${TARGETS}
 eval `opam config env`
-# git clone -b mirage-dev git://github.com/mirage/mirage-skeleton
-git clone -b functoria https://github.com/Drup/mirage-skeleton.git
+git clone -b mirage-dev git://github.com/mirage/mirage-skeleton
 cd mirage-skeleton
 make configure
 make build
