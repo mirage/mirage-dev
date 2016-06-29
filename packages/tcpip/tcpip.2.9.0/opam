@@ -29,9 +29,7 @@ tags: ["org:mirage"]
 
 build: [
   ["./configure" "--prefix" prefix
-    "--%{mirage-xen:enable}%-xen"
-    "--%{mirage-net-unix:enable}%-unix"
-  ]
+    "--%{mirage-xen:enable}%-xen" ]
   [make]
 ]
 build-test: [
@@ -44,26 +42,23 @@ remove: ["ocamlfind" "remove" "tcpip"]
 depends: [
   "ocamlfind" {build}
   "result"
-  "cstruct" {>= "2.1.0"}
+  "rresult"
+  "cstruct" {>= "1.9.0"}
   "ppx_tools"
-  "channel"
-  "mirage-types" {>= "2.9.0"}
-  "mirage-unix" {>= "1.1.0"}
+  "mirage-types" {>= "2.8.0"}
   "mirage-console"
   "mirage-clock-unix" {>= "1.0.0"}
-  "ipaddr" {>= "2.6.0"}
+  "ipaddr" {>= "2.2.0"}
   "mirage-profile" {>= "0.5"}
   "mirage-flow" {test}
   "mirage-vnetif" {test}
   "alcotest" {test}
   "pcap-format" {test}
+  "fmt" {test}
   "lwt" {>= "2.4.7"}
+  "logs" {>= "0.6.0"}
 ]
 depopts: [
   "mirage-xen"
-  "mirage-net-unix"
-]
-conflicts: [
-  "mirage-net-unix" { < "1.1.0" }
 ]
 available: [ocaml-version >= "4.02.3"]
