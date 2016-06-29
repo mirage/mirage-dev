@@ -22,8 +22,8 @@ remove: [
 ]
 depends: [
   "mirage-types-lwt"
-  "mirage-types" {>= "2.8.0"}
-  "ipaddr"       {>= "2.6.0"}
+  "mirage-types" {>= "2.9.0"}
+  "ipaddr"       {>= "2.6.1"}
   "functoria"    {>= "1.1.0"}
   "astring"
   "logs"
