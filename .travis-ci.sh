@@ -28,7 +28,7 @@ opam update -u
 TARGETS="mirage-http mirage mirage-xen github dns tls mirage-profile"
 opam install ${TARGETS}
 eval `opam config env`
-git clone -b mirage-dev git://github.com/mirage/mirage-skeleton
+git clone -b sleep-nsec git://github.com/hannesm/mirage-skeleton
 cd mirage-skeleton
 make configure
 make build
