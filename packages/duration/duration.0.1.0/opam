@@ -15,7 +15,7 @@ depends: [
 ]
 
 build: [
-  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" ]
+  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "true" ]
 ]
 build-test: [
   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "true" ]
