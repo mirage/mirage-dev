@@ -8,7 +8,7 @@ maintainer:   "david@numm.org"
 license:      "BSD2"
 
 build: [
-  ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%"]
+  ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "true"]
 ]
 depends: [
   "ocamlfind" {build}
