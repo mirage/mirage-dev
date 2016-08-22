@@ -1,0 +1,27 @@
+opam-version: "1.2"
+maintainer: "talex5@gmail.com"
+authors: [ "Thomas Leonard" ]
+license: "ISC"
+homepage: "https://github.com/mirage/mirage-logs"
+dev-repo: "https://github.com/mirage/mirage-logs.git"
+bug-reports: "https://github.com/mirage/mirage-logs/issues"
+
+build: [
+  [make "PREFIX=%{prefix}%"]
+]
+
+install: [make "PREFIX=%{prefix}%" "install"]
+
+remove: [["ocamlfind" "remove" "mirage-logs"]]
+
+depends: [
+  "logs" { >= "0.5.0" }
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "ptime"
+  "mirage-types"
+  "mirage-profile"
+  "lwt"
+]
+
+available: [ocaml-version >= "4.01.0"]
