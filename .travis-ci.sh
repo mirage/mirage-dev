@@ -27,7 +27,7 @@ opam update -u
 
 opam install mirage
 eval `opam config env`
-git clone -b mirage-dev git://github.com/mirage/mirage-skeleton
+git clone -b better-errors git://github.com/talex5/mirage-skeleton.git
 cd mirage-skeleton
 MODE=unix make
 MODE=xen make
