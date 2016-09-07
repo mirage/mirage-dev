@@ -1,8 +1,9 @@
 language: c
-script: bash -e .travis-ci.sh
+install: wget https://raw.githubusercontent.com/ocaml/ocaml-travisci-skeleton/master/.travis-ocaml.sh
+script: bash -ex .travis-ci.sh
 sudo: required
-os:
-- linux
+dist: trusty
 env:
   matrix:
+    - OCAML_VERSION=4.03
     - OCAML_VERSION=4.02
