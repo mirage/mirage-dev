@@ -9,7 +9,10 @@ dev-repo:     "https://github.com/mirage/mirage.git"
 tags:         ["org:mirage" "org:xapi-project"]
 
 build: [
-  ["./configure" "--bindir" "%{bin}%"]
+  ["ocaml" "setup.ml" "-configure"
+   "--prefix" prefix
+   "--bindir" bin
+  ]
   [make]
 ]
 install: [make "install"]
@@ -18,14 +21,17 @@ remove: [
   ["ocamlfind" "remove" "mirage"]
 ]
 depends: [
-  "mirage-types-lwt" {>= "2.3.0"}
-  "ipaddr"   {>= "1.0.0"}
-  "cmdliner" {>= "0.9.2"}
-  "lwt"      {>= "2.4.3"}
+  "mirage-types-lwt"
+  "mirage-types" {>= "2.9.0"}
+  "ipaddr"       {>= "2.6.1"}
+  "functoria"    {>= "1.1.0"}
+  "astring"
+  "logs"
 ]
 conflicts: [
-  "mirage-conduit" {< "2.2.0"}
   "nocrypto" {< "0.4.0"}
+  "cstruct"  {< "1.0.1"}
+  "io-page"  {< "1.4.0"}
   "crunch"   {< "1.2.2"}
 ]
-available: [ocaml-version >= "4.01.0"]
+available: [ocaml-version >= "4.02.3"]
