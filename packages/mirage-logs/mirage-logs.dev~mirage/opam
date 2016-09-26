@@ -5,23 +5,20 @@ license: "ISC"
 homepage: "https://github.com/mirage/mirage-logs"
 dev-repo: "https://github.com/mirage/mirage-logs.git"
 bug-reports: "https://github.com/mirage/mirage-logs/issues"
-
-build: [
-  [make "PREFIX=%{prefix}%"]
-]
-
-install: [make "PREFIX=%{prefix}%" "install"]
-
-remove: [["ocamlfind" "remove" "mirage-logs"]]
-
+tags: ["org:mirage"]
+available: [ ocaml-version >= "4.01.0"]
 depends: [
-  "logs" { >= "0.5.0" }
   "ocamlfind" {build}
   "ocamlbuild" {build}
+  "topkg" {build} 
+  "logs" { >= "0.5.0" }
   "ptime"
-  "mirage-types"
+  "mirage-types" { >= "3.0.0"}
   "mirage-profile"
   "lwt"
+  "alcotest" {test}
 ]
-
-available: [ocaml-version >= "4.01.0"]
+depopts: []
+build: [
+  "ocaml" "pkg/pkg.ml" "build"
+          "--pinned" "true"]
