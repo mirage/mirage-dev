@@ -10,3 +10,5 @@ opam install mirage
 git clone -b mirage-dev git://github.com/mirage/mirage-skeleton
 cd mirage-skeleton
 make MODE=${MODE}
+
+opam install -y -j2 datakit datakit-github datakit-client
