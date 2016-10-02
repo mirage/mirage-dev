@@ -1,0 +1,24 @@
+opam-version: "1.2"
+name: "mirage-vnetif"
+maintainer: "Magnus Skjegstad <magnus@skjegstad.com>"
+authors: "Magnus Skjegstad <magnus@skjegstad.com>"
+homepage: "https://github.com/MagnusS/mirage-vnetif"
+bug-reports: "https://github.com/MagnusS/mirage-vnetif/issues/"
+dev-repo: "https://github.com/MagnusS/mirage-vnetif.git"
+license: "ISC"
+build: [
+  [make]
+]
+install: [make "install"]
+remove: [
+  ["ocamlfind" "remove" "mirage-vnetif"]
+]
+depends: [ 
+  "lwt"
+  "mirage-types"
+  "cstruct"
+  "ipaddr"
+  "io-page"
+  "mirage-profile"
+  "duration"
+]
