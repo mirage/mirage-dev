@@ -35,12 +35,13 @@ depends: [
   "irmin-unix"
   "re"
   "tls" {>= "0.6.0"}
-  "nocrypto" {>= "0.5.1" & < "0.5.3"}
+  "nocrypto" {>= "dev~mirage"}
   "dns" {>= "0.15.3"}
   "menhir"
   "camlzip"
-  "sexplib" {<= "113.00.00"}
-  "fieldslib" {<= "113.00.00"}
+  "ppx_deriving"
+  "ppx_sexp_conv"
+  "ppx_fields_conv"
   "ocamlbuild" {build}
 ]
 available: [ ocaml-version >= "4.02.0" & ocaml-version < "4.03" ]
