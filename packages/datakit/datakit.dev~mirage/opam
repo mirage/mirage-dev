@@ -37,8 +37,8 @@ depends: [
   "asl"         {>= "0.10"}
   "mtime"
   "irmin-watcher" {>= "0.1.3"}
+  "datakit-server"
   "datakit-client" {test}
-  "datakit-server" {test}
   "datakit-github" {test}
   "alcotest"       {test}
 ]
