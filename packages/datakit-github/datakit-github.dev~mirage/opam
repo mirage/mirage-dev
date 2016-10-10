@@ -4,7 +4,7 @@ authors:      ["Thomas Leonard" "Magnus Skjegstad"
                "David Scott" "Thomas Gazagnaire"]
 license:      "ISC"
 homepage:     "https://github.com/docker/datakit"
-bug-reports:  "https://github.com/docker/datakit"
+bug-reports:  "https://github.com/docker/datakit/issues"
 dev-repo:     "https://github.com/docker/datakit.git"
 doc:          "https://docker.github.io/datakit/"
 
@@ -20,6 +20,7 @@ depends: [
   "lwt"
   "logs" "fmt" "mtime" "asl" "win-eventlog" "hvsock"
   "hex" "nocrypto" "conduit"
+  "datakit-server"
   "datakit-client"
   "github-hooks" {>= "0.1.1"}
   "github" {>= "2.0.0"}

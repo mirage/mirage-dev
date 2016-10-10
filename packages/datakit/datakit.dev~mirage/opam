@@ -4,13 +4,13 @@ authors:      ["Thomas Leonard" "Magnus Skjegstad"
                "David Scott" "Thomas Gazagnaire"]
 license:      "ISC"
 homepage:     "https://github.com/docker/datakit"
-bug-reports:  "https://github.com/docker/datakit"
+bug-reports:  "https://github.com/docker/datakit/issues"
 dev-repo:     "https://github.com/docker/datakit.git"
 doc:          "https://docker.github.io/datakit/"
 
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false"]
 build-test: [
-  ["ocaml" "pkg/pkg.ml" "build" "--tests" "true"]
+  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "true"]
   ["ocaml" "pkg/pkg.ml" "test"]
 ]
 
@@ -18,26 +18,28 @@ depends: [
   "ocamlfind"  {build}
   "ocamlbuild" {build}
   "topkg"      {build}
+  "datakit-server"
   "cmdliner"
   "rresult" "astring" "fmt"
-  "git" "mirage-tc" "uri"
+  "git" {>= "1.9.0"}
+  "mirage-tc" "uri"
   "mirage-types"
   "irmin"       {>= "0.10.1"}
-  "camlzip"
+  "camlzip"     {>= "1.06"}
   "cstruct"     {>= "2.2"}
   "result" "lwt"
   "conduit" "mirage-flow"
+  "cohttp"
   "named-pipe"
   "hvsock"      {>= "0.8.1"}
-  "protocol-9p" {>= "0.7.0"}
   "logs"        {>= "0.5.0"}
   "win-eventlog"
   "asl"         {>= "0.10"}
   "mtime"
   "irmin-watcher" {>= "0.1.3"}
-  "alcotest"   {test}
+  "datakit-client" {test}
+  "datakit-server" {test}
+  "datakit-github" {test}
+  "alcotest"       {test}
 ]
 available: [ocaml-version >= "4.02.0"]
-conflicts: [
-  "camlzip" {>= "1.06"}
-]
