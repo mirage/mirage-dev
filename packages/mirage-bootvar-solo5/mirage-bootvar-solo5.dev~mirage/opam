@@ -16,7 +16,6 @@ remove: [
 ]
 depends: [
   "mirage-solo5"
-  "mirage-types"
   "lwt"
   "parse-argv"
 ]
