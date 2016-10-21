@@ -21,7 +21,6 @@ remove: [
 ]
 depends: [
   "mirage-xen" { >= "2.2.0" }
-  "mirage-types"
-  "ipaddr"
   "astring"
+  "parse-argv"
 ]
