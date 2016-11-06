@@ -8,13 +8,13 @@ authors:      [ "Dan Williams <djwillia@us.ibm.com>" "Magnus Skjegstad <magnus@s
 license:      "ISC"
 
 build: [
-  [make]
+  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 ]
-install: [make "install"]
-remove: [
-  ["ocamlfind" "remove" "mirage-bootvar"]
-]
+
 depends: [
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build}
   "mirage-solo5"
   "lwt"
   "parse-argv"
