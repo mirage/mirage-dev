@@ -23,6 +23,7 @@ depends: [
   "base-unix"
   "cmdliner" {>= "0.9.8"}
   "rresult"
+  "astring"
   "fmt"
   "ocamlgraph"
   "ounit" {test}
