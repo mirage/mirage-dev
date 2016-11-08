@@ -12,17 +12,15 @@ authors: [
 tags: [
   "org:mirage"
 ]
-build: [make
-         "PREFIX=%{prefix}%" ]
-install: [make "install" "PREFIX=%{prefix}%"]
-remove: ["ocamlfind" "remove" "mirage-console-solo5"]
+build: [
+  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+]
 depends: [
   "ocamlfind" {build}
-  "mirage-console"
+  "ocamlbuild" {build}
+  "topkg" {build}
   "mirage-types-lwt"
   "mirage-solo5"
-]
-depopts: [
-]
-conflicts: [
+  "cstruct"
+  "lwt"
 ]
