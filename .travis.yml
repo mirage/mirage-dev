@@ -9,3 +9,7 @@ env:
     - OCAML_VERSION=4.03 MODE=xen
     - OCAML_VERSION=4.03 MODE=ukvm
     - OCAML_VERSION=4.03 MODE=virtio
+    - OCAML_VERSION=4.04 MODE=unix
+    - OCAML_VERSION=4.04 MODE=xen
+    - OCAML_VERSION=4.04 MODE=ukvm
+    - OCAML_VERSION=4.04 MODE=virtio
