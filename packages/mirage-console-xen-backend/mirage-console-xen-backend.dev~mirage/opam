@@ -6,6 +6,7 @@ dev-repo:      "https://github.com/mirage/mirage-console.git"
 doc:           "https://mirage.github.io/mirage-console/"
 authors:       [ "Anil Madhavapeddy" "David Scott"]
 tags:          [ "org:mirage" "org:xapi-project"]
+license:       "ISC"
 
 build: ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%"]
 
