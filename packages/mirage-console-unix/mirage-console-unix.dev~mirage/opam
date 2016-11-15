@@ -18,4 +18,5 @@ depends: [
   "cstruct"
   "mirage-types-lwt" {>= "3.0.0"}
   "mirage-unix" {>="1.1.0"}
+  "mirage-runtime"
 ]
