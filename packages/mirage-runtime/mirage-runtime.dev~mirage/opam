@@ -7,17 +7,18 @@ homepage:     "https://mirage.io/"
 bug-reports:  "https://github.com/mirage/mirage/issues/"
 dev-repo:     "https://github.com/mirage/mirage.git"
 tags:         ["org:mirage" "org:xapi-project"]
-build: [
-  "ocaml" "pkg/pkg.ml" "build" "--pkg-name" name
-  "--pinned" "%{pinned}%" "--with-lwt-types" "%{lwt+cstruct+ipaddr+io-page:installed}%" ]
-depends:   [
+doc:          "https://mirage.github.io/mirage/"
+
+build: ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%"]
+
+depends: [
   "ocamlbuild" {build}
   "ocamlfind"  {build}
   "topkg"      {build & >= "0.8.0"}
-  "result"
+  "ipaddr"             {>= "2.6.0"}
+  "functoria-runtime"
+  "astring"
+  "logs"
+  "mirage-types"
 ]
-depopts: [ "lwt" "cstruct" "ipaddr" "io-page" ]
-conflicts: [
-  "cstruct" {<"1.4.0"}
-  "io-page" {<"1.4.0"}
-]
+available: [ocaml-version >= "4.02.3"]
