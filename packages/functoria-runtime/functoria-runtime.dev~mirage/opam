@@ -12,20 +12,11 @@ doc:          "https://mirage.github.io/functoria/"
 license:      "ISC"
 
 build: ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%" ]
-build-test: [
-  ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%" "--tests" "true"]
-  ["ocaml" "pkg/pkg.ml" "test"]
-]
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg"     {build & >= "0.7.3"}
-  "base-unix"
   "cmdliner" {>= "0.9.8"}
-  "rresult"
-  "astring"
   "fmt"
-  "ocamlgraph"
-  "ounit" {test}
 ]
 available: [ocaml-version >= "4.02"]
