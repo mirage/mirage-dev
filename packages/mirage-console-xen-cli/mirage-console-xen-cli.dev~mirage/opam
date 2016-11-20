@@ -18,9 +18,9 @@ depends: [
   "io-page"
   "mirage-types" {> "1.1.0"}
   "mirage-types-lwt" {>= "2.9.0"}
-  "mirage-runtime"
   "cmdliner"
   "mirage-unix" {>="1.1.0"}
   "xenstore_transport" "xenctrl" "xen-gnt"
   "mirage-console-xen-backend" "mirage-console-unix"
 ]
+available: [ocaml-version >= "4.03.0"]
