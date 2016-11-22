@@ -5,7 +5,7 @@ eval $(opam config env)
 
 opam repo add mirage-dev .
 opam update -u
-opam install mirage
+opam install mirage crunch fat-filesystem
 
 git clone -b mirage-dev git://github.com/mirage/mirage-skeleton
 cd mirage-skeleton
