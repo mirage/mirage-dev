@@ -7,14 +7,15 @@ authors:      "Dan Williams <djwllia@us.ibm.com>"
 tags: [
   "org:mirage"
 ]
-build: [ [make] ]
-install: [ [make "install" "BINDIR=%{bin}%"] ]
-remove: [ [make "uninstall" "BINDIR=%{bin}%"] ]
+build: [
+  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+]
 depends: [
-  "ocamlfind"
+  "ocamlfind"  {build}
+  "ocamlbuild" {build}
+  "topkg"      {build}
   "lwt" {>= "2.4.3"}
   "cstruct" {>= "1.0.1"}
   "mirage-types" {>= "1.1.0"}
   "mirage-solo5"
-  
 ]
