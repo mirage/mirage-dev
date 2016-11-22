@@ -18,16 +18,20 @@ install: ["ocaml" "setup.ml" "-install"]
 remove:  ["ocamlfind" "remove" "mirage-block-unix"]
 depends: [
   "ocamlfind" {build}
+  "ocamlbuild" {build}
   "cstruct" {>= "1.3.0"}
-  "lwt" {>= "2.4.3"}
-  "mirage-types" {>= "1.1.0"}
+  "lwt" {>= "2.6.0"}
+  "mirage-types" {>= "3.0.0"}
+  "mirage-runtime"
+  "rresult"
+  "result"
   "io-page" {>= "1.0.0"}
   "uri"
   "logs"
+  "rresult"
   "ounit" {test}
-  "ocamlbuild" {build}
 ]
-available: [ ocaml-version >= "4.00.0" ]
+available: [ ocaml-version >= "4.02.3" ]
 depexts: [
  [["alpine"] ["linux-headers"]]
 ]
