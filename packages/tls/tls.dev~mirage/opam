@@ -32,6 +32,7 @@ depends: [
   "x509" {>= "0.5.0"}
   "ounit" {test}
   "ptime" {>= "0.8.1"} (* only necessary for mirage subpackage, but unable to express this here *)
+  "mirage-runtime" (* also only necessary for mirage subpackage *)
 ]
 depopts: [
   "lwt"
