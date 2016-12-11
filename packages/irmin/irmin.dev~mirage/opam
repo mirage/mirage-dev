@@ -12,14 +12,14 @@ build: [
       "--with-http"   "%{cohttp:installed}%"
       "--with-git"    "%{git:installed}%"
       "--with-unix"   "%{irmin-watcher+git-unix:installed}%"
-      "--with-mirage" "%{mirage-git:installed}%"
+      "--with-mirage" "%{git-mirage:installed}%"
 ]
 build-test: [
   ["ocaml" "pkg/pkg.ml" "build" "--tests" "true"
       "--with-http"   "%{cohttp:installed}%"
       "--with-git"    "%{git:installed}%"
       "--with-unix"   "%{irmin-watcher+git-unix:installed}%"
-      "--with-mirage" "%{mirage-git:installed}%"]
+      "--with-mirage" "%{git-mirage:installed}%"]
   ["ocaml" "pkg/pkg.ml" "test"]
 ]
 
@@ -42,6 +42,7 @@ depends: [
   "re"
   "cmdliner"
   "crunch"
+  "ptime"
   "mtime"         {test}
   "git-unix"      {test}
   "cohttp"        {test}
@@ -52,14 +53,14 @@ depopts: [
   "git"
   "git-unix"
   "cohttp"
-  "mirage-git"
+  "git-mirage"
   "irmin-watcher"
 ]
 conflicts: [
   "cohttp"        {< "0.18.3"}
   "git"           {< "1.8.0"}
   "conduit"       {< "0.9.0"}
-  "mirage-types"  {>="3.0.0"}
-  "irmin-watcher" {<"0.2.0"}
+  "mirage-types"  {< "3.0.0"}
+  "irmin-watcher" {< "0.2.0"}
 ]
 available: [ocaml-version >= "4.01.0"]
