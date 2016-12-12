@@ -8,18 +8,22 @@ bug-reports:  "https://github.com/docker/datakit-ci/issues"
 dev-repo:     "https://github.com/docker/datakit-ci.git"
 doc:          "https://docker.github.io/datakit-ci/"
 
-build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false" "-n" "datakit-ci"]
+build: [
+  "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false"
+  "-n" "datakit-ci"
+]
 
 depends: [
   "ocamlfind" {build}
   "multipart-form-data"
   "datakit-client"
-  "protocol-9p"
+  "datakit-github"
+  "protocol-9p" {>= "0.7.4"}
   "astring"
   "cmdliner"
   "fmt"
   "logs"
-  "tyxml"
+  "tyxml" {>= "4.0.0"}
   "tls"
   "channel"
   "conduit"
@@ -27,6 +31,7 @@ depends: [
   "pbkdf"
   "webmachine"
   "session"
+  "redis"
   "asetmap"
   "github"
   "ppx_sexp_conv" {build}
@@ -35,3 +40,4 @@ depends: [
   "irmin-unix" {test}
   "alcotest" {test}
 ]
+available: [ocaml-version >= "4.03.0"]
