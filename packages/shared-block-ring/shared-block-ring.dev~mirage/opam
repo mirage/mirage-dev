@@ -1,19 +1,18 @@
 opam-version: "1.2"
 maintainer: "jonathan.ludlam@citrix.com"
-authors: [ "David Scott" "Jon Ludlam" "Si Beaumont" ]
+authors: ["David Scott" "Jon Ludlam" "Si Beaumont"]
 homepage: "https://github.com/mirage/shared-block-ring"
 bug-reports: "https://github.com/mirage/shared-block-ring/issues/"
 dev-repo: "https://github.com/mirage/shared-block-ring.git"
 license: "ISC"
-tags: [
-  "org:mirage"
-  "org:xapi-project"
-]
+tags: ["org:mirage" "org:xapi-project"]
 build: [
   [make "all"]
 ]
 install: [make "install"]
-remove: [["ocamlfind" "remove" "shared-block-ring"]]
+remove: [
+  ["ocamlfind" "remove" "shared-block-ring"]
+]
 depends: [
   "cstruct" {>= "0.7.1"}
   "ppx_tools" {build}
@@ -21,7 +20,7 @@ depends: [
   "lwt"
   "ocamlfind"
   "ounit"
-  "mirage-types-lwt"
+  "mirage-types-lwt" {>= "3.0.0"}
   "mirage-block-unix"
   "mirage-clock-unix"
   "sexplib"

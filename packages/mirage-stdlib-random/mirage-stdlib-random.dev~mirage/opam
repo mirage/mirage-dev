@@ -6,15 +6,13 @@ doc: "https://hannesm.github.io/mirage-stdlib-random/doc"
 dev-repo: "https://github.com/hannesm/mirage-stdlib-random.git"
 bug-reports: "https://github.com/hannesm/mirage-stdlib-random/issues"
 license: "ISC"
-
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
-  "mirage-types-lwt"
+  "mirage-types-lwt" {>= "3.0.0"}
   "cstruct" {>= "1.9.0"}
 ]
-
 build: [
-  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" ]
+  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 ]

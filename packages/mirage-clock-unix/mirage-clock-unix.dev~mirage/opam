@@ -4,21 +4,30 @@ maintainer: "anil@recoil.org"
 homepage: "https://github.com/mirage/mirage-clock"
 bug-reports: "https://github.com/mirage/mirage-clock/issues"
 license: "ISC"
-tags: [
-  "org:mirage"
-  "org:xapi-project"
-]
+tags: ["org:mirage" "org:xapi-project"]
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
   "mirage-types" {>= "3.0.0"}
-  "mirage-types-lwt"
+  "mirage-types-lwt" {>= "3.0.0"}
   "lwt"
 ]
-build: [ "ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%" ]
+build: [
+  "ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%"
+]
 build-test: [
-  [ "ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%" "--tests" "true" ]
-  [ "ocaml" "pkg/pkg.ml" "test" ]
+  [
+    "ocaml"
+    "pkg/pkg.ml"
+    "build"
+    "--pkg-name"
+    name
+    "--pinned"
+    "%{pinned}%"
+    "--tests"
+    "true"
+  ]
+  ["ocaml" "pkg/pkg.ml" "test"]
 ]
 dev-repo: "git://github.com/mirage/mirage-clock"
