@@ -18,6 +18,7 @@ remove: ["ocamlfind" "remove" "mirage-flow"]
 depends: [
   "ocamlbuild" {build}
   "ocamlfind"  {build}
+  "mirage-types" {>= "3.0.0"}
   "mirage-types-lwt"
   "cstruct"
   "lwt" {>= "2.5.0"}
