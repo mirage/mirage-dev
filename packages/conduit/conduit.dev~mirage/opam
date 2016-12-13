@@ -34,6 +34,7 @@ depopts: [
   "launchd"
   "tls"
   "mirage-types-lwt"
+  "mirage-runtime"
 ]
 conflicts: [
   "lwt" {<"2.4.4"}
