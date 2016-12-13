@@ -11,11 +11,13 @@ license:       "ISC"
 build: ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%"]
 
 depends: [
-  "ocamlfind"  {build}
+  "ocamlfind" {build}
   "ocamlbuild" {build}
-  "topkg"      {build & >= "0.7.3"}
+  "topkg" {build & >= "0.7.3"}
   "mirage-console-xen-proto"
-  "mirage-types-lwt"
-  "xen-evtchn" "xen-gnt" "mirage-xen"
+  "mirage-types-lwt" {>= "3.0.0"}
+  "xen-evtchn"
+  "xen-gnt"
+  "mirage-xen"
 ]
 available: [ocaml-version >= "4.03.0"]
