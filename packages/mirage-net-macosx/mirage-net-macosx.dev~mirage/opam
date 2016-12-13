@@ -12,13 +12,13 @@ build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 
 depends: [
   "ocamlfind" {build}
-  "topkg"     {build}
+  "topkg" {build}
   "cstruct" {>= "1.4.0"}
   "ipaddr"
   "sexplib"
   "lwt" {>= "2.4.3"}
-  "mirage-types"
-  "mirage-types-lwt"
+  "mirage-types" {>= "3.0.0"}
+  "mirage-types-lwt" {>= "3.0.0"}
   "io-page" {>= "1.4.0"}
   "vmnet"
 ]

@@ -19,6 +19,6 @@ depends: [
   "functoria-runtime"
   "astring"
   "logs"
-  "mirage-types"
+  "mirage-types" {>= "3.0.0"}
 ]
 available: [ocaml-version >= "4.02.3"]

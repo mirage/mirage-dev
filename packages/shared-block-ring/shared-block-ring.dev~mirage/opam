@@ -21,7 +21,7 @@ depends: [
   "lwt"
   "ocamlfind"
   "ounit"
-  "mirage-types-lwt"
+  "mirage-types-lwt" {>= "3.0.0"}
   "mirage-block-unix"
   "mirage-clock-unix"
   "sexplib"
