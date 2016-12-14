@@ -25,7 +25,7 @@ depopts: [
 build: [
   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"
     "--with-lwt" "%{lwt+x509+tls:installed}%"
-    "--with-mirage" "%{mirage-types+lwt+cstruct+ipaddr+io-page:installed}%"
+    "--with-mirage" "%{mirage-types-lwt:installed}%"
     "--with-tls" "%{x509+tls+cstruct:installed}%" ]
 ]
 
