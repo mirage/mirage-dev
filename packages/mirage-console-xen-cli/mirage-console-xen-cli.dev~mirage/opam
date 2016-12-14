@@ -16,8 +16,8 @@ depends: [
   "cstruct"
   "ipaddr"
   "io-page"
-  "mirage-types" {> "1.1.0"}
-  "mirage-types-lwt" {>= "2.9.0"}
+  "mirage-types" {> "3.0.0"}
+  "mirage-types-lwt" {>= "3.0.0"}
   "cmdliner"
   "mirage-unix" {>="1.1.0"}
   "xenstore_transport" "xenctrl" "xen-gnt"
