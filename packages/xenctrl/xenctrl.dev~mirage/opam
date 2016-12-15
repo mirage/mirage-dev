@@ -32,6 +32,7 @@ depexts: [
   [["rhel"] ["xen-devel"]]
   [["oraclelinux"] ["xen-devel"]]
   [["xenserver"] ["xen-dom0-libs-devel" "xen-libs-devel"]]
+  [["alpine"] ["xen-dev"]]
 ]
 available: [ ocaml-version >= "4.00.0" ]
 

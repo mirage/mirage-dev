@@ -16,5 +16,5 @@ depends: [
   "topkg"      {build & >= "0.7.3"}
   "result" "rresult"
   "xenstore"
-  "mirage-types-lwt" {>= "2.9.0"}
+  "mirage-types-lwt" {>= "3.0.0"}
 ]

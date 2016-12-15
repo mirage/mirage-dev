@@ -1,5 +1,4 @@
 opam-version: "1.2"
-version: "2.0.1"
 maintainer: "dave@recoil.org"
 authors: [ "Jonathan Ludlam" "David Scott" ]
 license: "LGPL-2 with OCaml linking exception"
@@ -27,16 +26,16 @@ depends: [
   "oasis" {build}
   "ounit" {test}
   "ocamlfind" {build}
-  "type_conv" {build}
+  "ppx_tools" {build}
   "lwt"
   "cstruct" {>= "1.9.0"}
   "cmdliner"
   "sexplib"
   "mirage-block-unix"
   "io-page"
-  "mirage"
+  "mirage" {>= "1.1.0"}
   "uri"
-  "ppx_sexp_conv"
+  "ppx_sexp_conv" {!= "113.33.00+4.03"}
 ]
 tags: [ "org:mirage" "org:xapi-project" ]
 available: [ ocaml-version >= "4.02.0" ]
