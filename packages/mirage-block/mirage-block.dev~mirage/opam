@@ -22,6 +22,7 @@ depends: [
   "mirage-runtime"
   "lwt"
   "logs"
+  "ocamlbuild" {build}
   "ocamlfind" {build}
   "oasis" {build}
   "ounit" {test}
