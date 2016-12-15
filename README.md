@@ -10,3 +10,5 @@ add this repo as an OPAM repository and then update and upgrade:
 opam repo add mirage-dev https://github.com/mirage/mirage-dev.git
 opam update -yu
 ```
+
+See https://ci.mirage.io for tests.
