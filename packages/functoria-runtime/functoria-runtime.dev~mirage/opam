@@ -19,4 +19,4 @@ depends: [
   "cmdliner" {>= "0.9.8"}
   "fmt"
 ]
-available: [ocaml-version >= "4.03"]
+available: [ocaml-version >= "4.02"]
