@@ -27,6 +27,7 @@ depends: [
   "io-page" {>= "1.0.1"}
   "tuntap" {>= "1.3.0"}
   "result"
+  "mirage-runtime"
   "alcotest" {test}
 ]
 available: [ ocaml-version >= "4.02.3"]
