@@ -10,10 +10,10 @@ available: [ ocaml-version >= "4.01.0"]
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
-  "topkg" {build} 
+  "topkg" {build}
   "logs" { >= "0.5.0" }
   "ptime"
-  "mirage-types" { >= "3.0.0"}
+  "mirage-clock" { >= "1.2.0"}
   "mirage-profile"
   "lwt"
   "alcotest" {test}
@@ -27,5 +27,5 @@ build-test: [
   [ "ocaml" "pkg/pkg.ml" "build"
           "--tests" "true"
           "--pinned" "%{pinned}%" ]
-  [ "ocaml" "pkg/pkg.ml" "test" ] 
+  [ "ocaml" "pkg/pkg.ml" "test" ]
 ]
