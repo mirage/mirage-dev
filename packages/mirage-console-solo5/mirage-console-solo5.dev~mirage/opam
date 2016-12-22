@@ -19,9 +19,8 @@ depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
-  "mirage-types-lwt" {>= "3.0.0"}
+  "mirage-console-lwt" {>= "2.2.0"}
   "mirage-solo5"
-  "mirage-runtime"
   "cstruct"
   "lwt"
 ]
