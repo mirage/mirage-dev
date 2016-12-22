@@ -6,20 +6,24 @@ license: "ISC"
 homepage: "https://github.com/mirage/mirage-block-ramdisk"
 dev-repo: "https://github.com/mirage/mirage-block-ramdisk.git"
 bug-reports: "https://github.com/mirage/mirage-block-ramdisk/issues"
+doc: "https://mirage.github.io/mirage-block-ramdisk/"
 
-tags: [
-  "org:mirage"
+tags: ["org:mirage"]
+build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false"]
+build-test: [
+  ["ocaml" "pkg/pkg.ml" "build" "--tests" "true"]
+  ["ocaml" "pkg/pkg.ml" "test"]
 ]
-build: ["ocaml" "pkg/pkg.ml" "build"]
 
 depends: [
+  "ocamlfind"  {build}
+  "ocamlbuild" {build}
+  "topkg"      {build}
+  "alcotest"   {test}
   "base-bytes"
   "cstruct"
   "io-page"
-  "mirage-types-lwt" {>= "3.0.0"}
+  "mirage-block-lwt" {>= "1.0.0"}
   "lwt"
-  "ocamlfind" {build}
-  "ocamlbuild" {build}
-  "topkg" {build}
 ]
 available: [ocaml-version >= "4.03.0"]
