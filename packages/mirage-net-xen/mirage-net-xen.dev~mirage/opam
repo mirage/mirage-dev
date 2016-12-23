@@ -11,13 +11,15 @@ remove: [
   ["ocamlfind" "remove" "netchannel"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "cstruct" {>= "2.1.0"}
   "ppx_tools" {build}
   "ppx_sexp_conv" {build}
   "ocamlbuild" {build}
   "lwt" {>= "2.4.3"}
-  "mirage-types" {>= "1.1.0"}
+  "mirage-types" {>= "3.0.0"}
+  "mirage-types-lwt" {>= "3.0.0"}
+  "mirage-runtime"
   "io-page" {>= "1.5.0"}
   "mirage-xen" {>= "1.1.0"}
   "ipaddr" {>= "1.0.0"}

@@ -25,7 +25,7 @@ depends: [
   "cstruct" {>= "1.9.0"}
   "ppx_tools"
   "shared-memory-ring" {>= "0.4.1"}
-  "mirage-types" {>= "1.1.0"}
+  "mirage-block-lwt" {>= "1.0.0"}
   "ipaddr"
   "io-page" {>= "1.4.0"}
   "mirage-xen" {>= "1.0.1" }

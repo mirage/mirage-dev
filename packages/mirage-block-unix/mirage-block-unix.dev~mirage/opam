@@ -21,8 +21,7 @@ depends: [
   "ocamlbuild" {build}
   "cstruct" {>= "1.3.0"}
   "lwt" {>= "2.6.0"}
-  "mirage-types" {>= "3.0.0"}
-  "mirage-runtime"
+  "mirage-block-lwt" {>= "1.0.0"}
   "rresult"
   "result"
   "io-page" {>= "1.0.0"}

@@ -16,6 +16,7 @@ depends: [
   "lwt" {>= "2.4.3"}
   "mirage-types-lwt" {>= "3.0.0"}
   "mirage-types" {>= "3.0.0"}
+  "mirage-runtime"
   "io-page" {>= "1.0.0"}
   "ipaddr" {>= "1.0.0"}
   "mirage-solo5"

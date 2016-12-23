@@ -16,6 +16,8 @@ depends: [
   "cstruct" {>= "1.4.0"}
   "ipaddr"
   "sexplib"
+  "logs"
+  "mirage-runtime"
   "lwt" {>= "2.4.3"}
   "mirage-types" {>= "3.0.0"}
   "mirage-types-lwt" {>= "3.0.0"}
