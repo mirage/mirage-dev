@@ -17,9 +17,7 @@ depends: [
   "ppx_sexp_conv" {build}
   "ocamlbuild" {build}
   "lwt" {>= "2.4.3"}
-  "mirage-types" {>= "3.0.0"}
-  "mirage-types-lwt" {>= "3.0.0"}
-  "mirage-runtime"
+  "mirage-net-lwt" {>= "1.0.0"}
   "io-page" {>= "1.5.0"}
   "mirage-xen" {>= "1.1.0"}
   "ipaddr" {>= "1.0.0"}
