@@ -15,6 +15,7 @@ depends: [
   "ocamlbuild" {build}
   "topkg" {build}
   "mirage-fs" {>= "1.0.0"}
+  "mirage-kv-lwt"
   "lwt"
   "cstruct"
 ]
