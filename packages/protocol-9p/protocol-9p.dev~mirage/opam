@@ -23,7 +23,7 @@ depends: [
   "result"
   "rresult"
   "mirage-types-lwt"
-  "channel" {>= "1.1.0" }
+  "mirage-channel-lwt"
   "lwt" {>= "2.4.7"}
   "base-unix"
   "cmdliner"
