@@ -10,8 +10,8 @@ license:      "ISC"
 build:   ["ocamlfind" "query" "conduit.mirage"]
 depends: [
   "mirage-flow-lwt" {>= "1.2.0"}
-  "mirage-dns" {>= "2.0.0"}
-  "conduit"    {>= "0.8.4"}
+  "mirage-dns"      {>= "2.6.0"}
+  "conduit"         {>= "0.14.3"}
 ]
 depopts: [
   "vchan"
