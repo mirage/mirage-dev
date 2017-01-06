@@ -6,10 +6,16 @@ homepage:     "https://github.com/mirage/irmin"
 bug-reports:  "https://github.com/mirage/irmin/issues"
 dev-repo:     "https://github.com/mirage/irmin.git"
 
+build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "-n" name]
+
 depends: [
-  "mirage-types" {>= "3.0.0"}
-  "mirage-types-lwt" {>= "3.0.0"}
-  "mirage-runtime"
-  "git-mirage"
-  "irmin"
+  "ocamlbuild" {build}
+  "ocamlfind"  {build}
+  "topkg"      {build & >= "0.7.8"}
+  "irmin"      {>= "1.0.0"}
+  "irmin-git"  {>= "1.0.0"}
+  "git-mirage" {>= "2.0.0"}
+  "ptime"
+  "mirage-kv-lwt"
+  "result"
 ]
