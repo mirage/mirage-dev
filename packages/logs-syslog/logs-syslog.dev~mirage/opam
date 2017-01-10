@@ -19,7 +19,7 @@ depends: [
 ]
 
 depopts: [
-  "lwt" "x509" "tls" "mirage-types-lwt" "cstruct" "ipaddr" "io-page"
+  "lwt" "x509" "tls" "mirage-kv-lwt" "mirage-console-lwt" "mirage-clock" "mirage-stack-lwt" "cstruct" "ipaddr" "io-page"
 ]
 
 conflicts: [
@@ -29,7 +29,7 @@ conflicts: [
 build: [
   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"
     "--with-lwt" "%{lwt:installed}%"
-    "--with-mirage" "%{mirage-types-lwt:installed}%"
-    "--with-tls" "%{x509+tls+cstruct:installed}%" ]
+    "--with-mirage" "%{mirage-stack-lwt+mirage-console-lwt+mirage-clock:installed}%"
+    "--with-tls" "%{mirage-kv-lwt+x509+tls+cstruct:installed}%" ]
 ]
 
