@@ -11,8 +11,7 @@ depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
-  "mirage-types" {>= "3.0.0"}
-  "mirage-types-lwt" {>= "3.0.0"}
+  "mirage-random"
   "cstruct" {>= "1.9.0"}
 ]
 
