@@ -17,7 +17,7 @@ depends: [
   "mirage-protocols"
   "ipaddr"
   "lwt"
-  "cstruct"
+  "cstruct" {>= "1.9.0"}
 ]
 
 available: [ ocaml-version >= "4.01.0"]
