@@ -13,7 +13,7 @@ build: ["ocaml" "pkg/pkg.ml" "build" "--pkg-name" name "--pinned" "%{pinned}%"]
 depends: [
   "ocamlfind"  {build}
   "ocamlbuild" {build}
-  "topkg"      {build & >= "0.7.3"}
+  "topkg"      {build & >= "0.8.0"}
   "lwt"
   "cstruct"
   "mirage-console-lwt" {>= "2.2.0"}

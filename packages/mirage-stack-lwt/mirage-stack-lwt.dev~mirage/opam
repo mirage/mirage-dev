@@ -13,10 +13,8 @@ build: ["ocaml" "pkg/pkg.ml" "build" "-n" name "--pinned" "%{pinned}%" ]
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
-  "topkg" {build}
+  "topkg" {build & >= "0.8.0"}
   "mirage-stack"
-  "mirage-device"
-  "mirage-protocols-lwt"
   "ipaddr"
   "lwt"
   "cstruct"
