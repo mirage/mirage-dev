@@ -15,6 +15,6 @@ build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
 depends: [
   "ocamlfind"  {build}
   "ocamlbuild" {build}
-  "topkg"      {build & >= "0.7.3"}
-  "cstruct"    {>="1.9.0"}
+  "topkg"      {build & >= "0.8.0"}
+  "cstruct" {>= "1.9.0"}
 ]

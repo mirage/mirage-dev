@@ -3,6 +3,7 @@ name:         "mirage-block-ccm"
 homepage:     "https://github.com/sg2342/mirage-block-ccm"
 dev-repo:     "https://github.com/sg2342/mirage-block-ccm.git"
 bug-reports:  "https://github.com/sg2342/mirage-block-ccm/issues"
+author:       ["Stefan Grundmann <sg2342@googlemail.com>"]
 maintainer:   ["Stefan Grundmann <sg2342@googlemail.com>"]
 license:      "ISC"
 
@@ -17,15 +18,16 @@ depends: [
   "ocamlfind" {build}
   "cstruct" {>= "1.0.1"}
   "lwt" {>= "2.4.3"}
-  "mirage-types-lwt" {>= "3.0.0"}
+  "mirage-block"
+  "mirage-block-lwt"
   "nocrypto" {>= "0.5.1"}
   "io-page" {>= "1.0.0"}
   "ounit" {test}
   "bisect" {test}
 ]
+
 build-test: [
   [ "./configure" "--%{ounit:enable}%-tests" "--%{bisect:enable}%-coverage" ]
   [ make "cover_test" ] ]
 
 available: [ocaml-version > "4.02.0"]
-authors: "Stefan Grundmann <sg2342@googlemail.com>"

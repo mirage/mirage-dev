@@ -16,7 +16,7 @@ build: ["ocaml" "pkg/pkg.ml" "build"
 depends: [
   "ocamlfind"  {build}
   "ocamlbuild" {build}
-  "topkg"      {build & >= "0.7.3"}
+  "topkg"      {build & >= "0.8.0"}
   "mirage-time"
   "lwt"
 ]
