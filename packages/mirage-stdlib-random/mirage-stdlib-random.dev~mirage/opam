@@ -6,6 +6,7 @@ doc: "https://hannesm.github.io/mirage-stdlib-random/doc"
 dev-repo: "https://github.com/hannesm/mirage-stdlib-random.git"
 bug-reports: "https://github.com/hannesm/mirage-stdlib-random/issues"
 license: "ISC"
+tags: [ "org:mirage" ]
 
 depends: [
   "ocamlfind" {build}

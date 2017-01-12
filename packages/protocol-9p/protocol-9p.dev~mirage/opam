@@ -6,6 +6,7 @@ homepage:     "https://github.com/mirage/ocaml-9p"
 dev-repo:     "https://github.com/mirage/ocaml-9p.git"
 bug-reports:  "https://github.com/mirage/ocaml-9p/issues"
 doc:          "https://mirage.github.io/ocaml-9p/"
+tags: [ "org:mirage" ]
 
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"
           "--with-lambda-term" "%{lambda-term:installed}%"]

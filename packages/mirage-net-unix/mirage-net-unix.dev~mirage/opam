@@ -10,6 +10,7 @@ homepage:    "https://github.com/mirage/mirage-net-unix"
 bug-reports: "https://github.com/mirage/mirage-net-unix/issues"
 dev-repo:    "https://github.com/mirage/mirage-net-unix.git"
 license:     "ISC"
+tags: [ "org:mirage" ]
 
 build:   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false" ]
 build-test: [

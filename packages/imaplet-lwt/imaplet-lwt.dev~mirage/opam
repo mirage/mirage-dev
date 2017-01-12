@@ -7,6 +7,7 @@ homepage: "https://github.com/gregtatcam/imaplet-lwt"
 bug-reports: "https://github.com/gregtatcam/imaplet-lwt/issues"
 dev-repo: "https://github.com/gregtatcam/imaplet-lwt.git"
 license: "MIT"
+tags: [ "org:mirage" ]
 
 build: [
   ["./configure" "--prefix=%{prefix}%"]

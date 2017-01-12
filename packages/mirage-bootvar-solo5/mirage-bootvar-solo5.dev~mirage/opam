@@ -6,6 +6,7 @@ bug-reports:  "https://github.com/mirage/mirage-bootvar-solo5/issues/"
 dev-repo:     "https://github.com/mirage/mirage-bootvar-solo5.git"
 authors:      [ "Dan Williams <djwillia@us.ibm.com>" "Magnus Skjegstad <magnus@skjegstad.com>" "Martin Lucina <martin@lucina.net>" ]
 license:      "ISC"
+tags: [ "org:mirage" ]
 
 build: [
   ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]

@@ -6,7 +6,7 @@ doc: "https://pqwy.github.io/ocb-stubblr/doc"
 license: "ISC"
 dev-repo: "https://github.com/pqwy/ocb-stubblr.git"
 bug-reports: "https://github.com/pqwy/ocb-stubblr/issues"
-tags: ["ocamlbuild"]
+tags: ["ocamlbuild" "org:mirage"]
 available: [ ocaml-version >= "4.01.0" ]
 depends: [
   "ocamlfind" {build}

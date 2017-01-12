@@ -4,6 +4,7 @@ homepage:     "https://github.com/mirage/ocaml-dns"
 dev-repo:     "https://github.com/mirage/ocaml-dns.git"
 bug-reports:  "https://github.com/mirage/ocaml-dns/issues"
 license:      "ISC"
+tags: [ "org:mirage" ]
 authors: [
   "Anil Madhavapeddy"
   "Tim Deegan"
