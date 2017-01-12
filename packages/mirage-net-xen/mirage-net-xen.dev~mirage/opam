@@ -4,6 +4,7 @@ authors:       ["Anil Madhavapeddy" "Thomas Leonard"]
 homepage:      "https://github.com/mirage/mirage-net-xen"
 bug-reports:   "https://github.com/mirage/mirage-net-xen/issues"
 dev-repo:      "https://github.com/mirage/mirage-net-xen.git"
+tags: [ "org:mirage" ]
 build: [ [make] ]
 install: [ [make "install"] ]
 remove: [

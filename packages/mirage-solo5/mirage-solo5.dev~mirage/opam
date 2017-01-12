@@ -5,6 +5,7 @@ bug-reports:  "https://github.com/mirage/mirage-solo5/issues/"
 dev-repo:     "https://github.com/mirage/mirage-solo5.git"
 authors:       [ "Anil Madhavapeddy <anil@recoil.org>" "Dan Williams <djwillia@us.ibm.com>" "Martin Lucina <martin@lucina.net>" ]
 license:      "ISC"
+tags:         [ "org:mirage" ]
 
 build:   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" ]
 

@@ -6,6 +6,7 @@ homepage: "https://github.com/mirage/mirage-block"
 dev-repo: "https://github.com/mirage/mirage-block.git"
 bug-reports: "https://github.com/mirage/mirage-block/issues"
 doc: "https://mirage.gitub.io/mirage-block/"
+tags: [ "org:mirage" ]
 
 build: ["ocaml" "pkg/pkg.ml" "build" "-n" name "--pinned" "%{pinned}%"]
 

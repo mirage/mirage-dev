@@ -6,6 +6,7 @@ doc: "https://hannesm.github.io/randomconv/doc"
 dev-repo: "https://github.com/hannesm/randomconv.git"
 bug-reports: "https://github.com/hannesm/randomconv/issues"
 license: "ISC"
+tags: [ "org:mirage" ]
 
 depends: [
   "ocamlfind" {build}

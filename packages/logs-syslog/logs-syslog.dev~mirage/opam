@@ -7,6 +7,7 @@ dev-repo: "https://github.com/hannesm/logs-syslog.git"
 bug-reports: "https://github.com/hannesm/logs-syslog/issues"
 license: "ISC"
 available: [ ocaml-version >= "4.03.0"]
+tags: [ "org:mirage" ]
 
 depends: [
   "ocamlfind" {build}

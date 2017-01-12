@@ -6,6 +6,7 @@ bug-reports: "https://github.com/haesbaert/charrua-unix/issues"
 license: "ISC"
 dev-repo: "https://github.com/haesbaert/charrua-unix.git"
 available: [ocaml-version >= "4.02" & opam-version >= "1.2"]
+tags: [ "org:mirage" ]
 build: [
   ["sh" "build.sh"]
 ]

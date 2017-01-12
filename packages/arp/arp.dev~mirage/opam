@@ -7,6 +7,7 @@ dev-repo: "https://github.com/hannesm/arp.git"
 bug-reports: "https://github.com/hannesm/arp/issues"
 license: "ISC"
 available: [ ocaml-version >= "4.02.0"]
+tags: [ "org:mirage" ]
 
 depends: [
   "ocamlfind" {build}

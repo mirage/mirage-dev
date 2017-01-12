@@ -5,6 +5,7 @@ license:      "BSD-2-Clause"
 homepage:     "https://github.com/talex5/mirage-qubes"
 bug-reports:  "https://github.com/talex5/mirage-qubes/issues"
 dev-repo:     "https://github.com/talex5/mirage-qubes.git"
+tags: [ "org:mirage" ]
 
 build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false"
         "--with-ipv4" "%{tcpip+ipaddr:installed}%"

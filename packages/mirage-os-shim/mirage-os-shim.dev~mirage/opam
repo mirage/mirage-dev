@@ -6,7 +6,7 @@ doc: "https://pqwy.github.io/mirage-os-shim/doc"
 license: "ISC"
 dev-repo: "https://github.com/pqwy/mirage-os-shim.git"
 bug-reports: "https://github.com/pqwy/mirage-os-shim/issues"
-tags: []
+tags: ["org:mirage"]
 build: [
   "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false"
           "--with-mirage-unix" "%{mirage-unix:installed}%"

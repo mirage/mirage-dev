@@ -8,6 +8,7 @@ license:      "part ISC, part LGPL-2.1 with OCaml linking exception, part 3-clau
 build:   [make "unix-build"]
 install: [make "unix-install"   "PREFIX=%{prefix}%"]
 remove:  [make "unix-uninstall" "PREFIX=%{prefix}%"]
+tags: [ "org:mirage" ]
 
 depends: [
   "ocamlfind" {build}
