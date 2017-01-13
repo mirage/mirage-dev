@@ -51,3 +51,4 @@ depexts: [
  [["debian"] ["libxen-dev" "uuid-dev"]]
  [["ubuntu"] ["libxen-dev" "uuid-dev"]]
 ]
+tags: "org:mirage"

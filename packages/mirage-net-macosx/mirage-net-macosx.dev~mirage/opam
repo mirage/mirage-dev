@@ -22,3 +22,4 @@ depends: [
   "io-page" {>= "1.4.0"}
   "vmnet"
 ]
+tags: "org:mirage"

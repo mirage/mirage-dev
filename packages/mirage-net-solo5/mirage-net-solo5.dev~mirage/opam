@@ -21,3 +21,4 @@ depends: [
   "logs" {>= "0.6.0"}
 ]
 available: [ ocaml-version >= "4.01.0" ]
+tags: "org:mirage"

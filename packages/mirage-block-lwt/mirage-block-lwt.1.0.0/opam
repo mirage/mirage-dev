@@ -22,3 +22,4 @@ depends: [
 ]
 
 available: [ocaml-version >= "4.02.0"]
+tags: "org:mirage"

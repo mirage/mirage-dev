@@ -28,3 +28,4 @@ depopts: [
   "tcpip"
 ]
 available: [ocaml-version >= "4.03.0"]
+tags: "org:mirage"
