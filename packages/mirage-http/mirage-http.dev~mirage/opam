@@ -21,3 +21,4 @@ depends: [
   "cohttp" {>= "0.18.0"}
 ]
 available: [ocaml-version >= "4.00.0"]
+tags: "org:mirage"

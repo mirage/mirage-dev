@@ -18,3 +18,4 @@ depends: [
 build: [
   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" ]
 ]
+tags: "org:mirage"

@@ -34,3 +34,4 @@ available: [ ocaml-version >= "4.02.3" ]
 depexts: [
  [["alpine"] ["linux-headers"]]
 ]
+tags: "org:mirage"

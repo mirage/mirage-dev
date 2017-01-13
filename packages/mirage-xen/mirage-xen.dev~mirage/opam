@@ -5,6 +5,7 @@ homepage:     "https://github.com/mirage/mirage-platform"
 bug-reports:  "https://github.com/mirage/mirage-platform/issues/"
 dev-repo:     "https://github.com/mirage/mirage-platform.git"
 license:      "part ISC, part LGPL-2.1 with OCaml linking exception, part 3-clause BSD"
+tags:         ["org:mirage"]
 
 build:   [make "xen-build"]
 install: [make "xen-install"   "PREFIX=%{prefix}%"]

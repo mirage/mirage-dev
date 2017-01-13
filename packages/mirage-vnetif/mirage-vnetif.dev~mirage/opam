@@ -24,3 +24,4 @@ depends: [
   "duration"
   "result"
 ]
+tags: "org:mirage"
