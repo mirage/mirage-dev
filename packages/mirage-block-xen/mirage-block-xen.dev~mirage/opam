@@ -29,6 +29,7 @@ depends: [
   "ipaddr"
   "io-page" {>= "1.4.0"}
   "mirage-xen" {>= "1.0.1" }
+  "rresult"
 ]
 available: [
   ocaml-version >= "4.02.0" & os = "linux"
