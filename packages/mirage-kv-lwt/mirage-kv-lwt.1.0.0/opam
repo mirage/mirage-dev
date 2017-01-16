@@ -13,10 +13,10 @@ build: ["ocaml" "pkg/pkg.ml" "build" "-n" name "--pinned" "%{pinned}%" ]
 depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
-  "topkg" {build}
+  "topkg" {build & >= "0.8.0"}
   "mirage-kv"
   "lwt"
-  "cstruct"
+  "cstruct" {>= "1.9.0"}
 ]
 
 available: [ ocaml-version >= "4.01.0"]
