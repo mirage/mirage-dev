@@ -22,8 +22,8 @@ depends: [
   "ocamlfind"
   "ounit"
   "mirage-types-lwt" {>= "3.0.0"}
-  "mirage-block-unix"
-  "mirage-clock-unix"
+  "mirage-block-unix" {>= "2.5.0"}
+  "mirage-clock-unix" {>= "1.2.0"}
   "sexplib"
   "io-page"
   "io-page-unix"

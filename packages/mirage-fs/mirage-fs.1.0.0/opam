@@ -15,7 +15,7 @@ depends: [
   "ocamlbuild" {build}
   "topkg" {build}
   "fmt"
-  "mirage-device"
+  "mirage-device" {>= "1.0.0"}
 ]
 
 available: [ ocaml-version >= "4.01.0"]

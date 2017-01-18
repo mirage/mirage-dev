@@ -24,5 +24,7 @@ depends: [
   "logs"
   "alcotest" {test}
 ]
-conflicts: [ "tcpip" {<"2.5.0"} ]
+conflicts: [
+  "tcpip" {< "3.0.0"}
+]
 available: [ ocaml-version >= "4.01.0"]
