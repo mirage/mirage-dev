@@ -5,7 +5,7 @@ license: "ISC"
 homepage: "https://github.com/mirage/mirage-block"
 dev-repo: "https://github.com/mirage/mirage-block.git"
 bug-reports: "https://github.com/mirage/mirage-block/issues"
-doc: "https://mirage.gitub.io/mirage-block/"
+doc: "https://mirage.github.io/mirage-block/"
 
 build: ["ocaml" "pkg/pkg.ml" "build" "-n" name "--pinned" "%{pinned}%"]
 
