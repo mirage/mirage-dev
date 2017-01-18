@@ -18,8 +18,8 @@ depends: [
   "ocamlfind" {build}
   "cstruct" {>= "1.0.1"}
   "lwt" {>= "2.4.3"}
-  "mirage-block"
-  "mirage-block-lwt"
+  "mirage-block" {>= "1.0.0"}
+  "mirage-block-lwt" {>= "1.0.0"}
   "nocrypto" {>= "0.5.1"}
   "io-page" {>= "1.0.0"}
   "ounit" {test}

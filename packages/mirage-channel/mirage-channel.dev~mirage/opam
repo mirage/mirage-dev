@@ -16,6 +16,7 @@ depends: [
   "topkg" {build & >= "0.8.0"}
   "mirage-flow" {>= "1.2.0"}
 ]
-conflicts: [ "tcpip" {<"2.5.0"} ]
-
+conflicts: [
+  "tcpip" {< "3.0.0"}
+]
 available: [ ocaml-version >= "4.01.0"]

@@ -14,7 +14,7 @@ depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build & >= "0.8.0"}
-  "mirage-device"
+  "mirage-device" {>= "1.0.0"}
   "fmt"
 ]
 

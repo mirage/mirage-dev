@@ -26,7 +26,7 @@ depends: [
   "tyxml" {>= "4.0.0"}
   "tls"
   "channel"
-  "conduit"
+  "conduit" {>= "0.15.0"}
   "io-page"
   "pbkdf"
   "webmachine"
@@ -37,7 +37,7 @@ depends: [
   "prometheus-app"
   "lwt" {>= "2.7.0"}
   "ppx_sexp_conv" {build}
-  "crunch" {build}
+  "crunch" {build & >= "2.0.0"}
   "datakit" {test}
   "irmin-unix" {test}
   "alcotest" {test}

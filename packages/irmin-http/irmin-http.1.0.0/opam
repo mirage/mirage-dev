@@ -12,10 +12,10 @@ build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "-n" name]
 
 depends: [
   "ocamlbuild" {build}
-  "ocamlfind"  {build}
-  "topkg"      {build & >= "0.7.8"}
-  "crunch"
-  "irmin"  {>= "1.0.0"}
+  "ocamlfind" {build}
+  "topkg" {build & >= "0.7.8"}
+  "crunch" {>= "2.0.0"}
+  "irmin" {>= "1.0.0"}
   "cohttp" {>= "0.18.3"}
 ]
 available: [ocaml-version >= "4.01.0"]

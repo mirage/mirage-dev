@@ -11,9 +11,9 @@ build: ["ocaml" "pkg/pkg.ml" "build" "-n" name "--pinned" "%{pinned}%"]
 
 depends: [
   "ocamlbuild" {build}
-  "ocamlfind"  {build}
-  "topkg"      {build}
-  "mirage-device"
+  "ocamlfind" {build}
+  "topkg" {build}
+  "mirage-device" {>= "1.0.0"}
 ]
 
 available: [ocaml-version >= "4.02.0"]

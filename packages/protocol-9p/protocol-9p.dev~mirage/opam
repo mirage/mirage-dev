@@ -23,9 +23,9 @@ depends: [
   "sexplib" {> "113.00.00" }
   "result"
   "rresult"
-  "mirage-flow-lwt"
-  "mirage-kv-lwt"
-  "mirage-channel-lwt"
+  "mirage-flow-lwt" {>= "1.2.0"}
+  "mirage-kv-lwt" {>= "1.0.0"}
+  "mirage-channel-lwt" {>= "3.0.0"}
   "lwt" {>= "2.4.7"}
   "base-unix"
   "cmdliner"

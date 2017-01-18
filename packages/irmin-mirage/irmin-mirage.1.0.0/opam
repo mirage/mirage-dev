@@ -11,12 +11,12 @@ build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "-n" name]
 
 depends: [
   "ocamlbuild" {build}
-  "ocamlfind"  {build}
-  "topkg"      {build & >= "0.7.8"}
-  "irmin"      {>= "1.0.0"}
-  "irmin-git"  {>= "1.0.0"}
+  "ocamlfind" {build}
+  "topkg" {build & >= "0.7.8"}
+  "irmin" {>= "1.0.0"}
+  "irmin-git" {>= "1.0.0"}
   "git-mirage" {>= "2.0.0"}
   "ptime"
-  "mirage-kv-lwt"
+  "mirage-kv-lwt" {>= "1.0.0"}
   "result"
 ]
