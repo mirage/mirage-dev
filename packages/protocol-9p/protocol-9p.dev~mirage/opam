@@ -8,7 +8,7 @@ bug-reports:  "https://github.com/mirage/ocaml-9p/issues"
 doc:          "https://mirage.github.io/ocaml-9p/"
 tags:         ["org:mirage"]
 
-build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "false"
+build: ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"
           "--with-lambda-term" "%{lambda-term:installed}%"]
 
 build-test: [
@@ -23,7 +23,8 @@ depends: [
   "sexplib" {> "113.00.00" }
   "result"
   "rresult"
-  "mirage-types-lwt"
+  "mirage-flow-lwt"
+  "mirage-kv-lwt"
   "mirage-channel-lwt"
   "lwt" {>= "2.4.7"}
   "base-unix"
