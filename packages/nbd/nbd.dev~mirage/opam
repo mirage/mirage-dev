@@ -33,7 +33,7 @@ depends: [
   "cstruct" {>= "1.9.0"}
   "cmdliner"
   "sexplib"
-  "mirage-types-lwt"
+  "mirage-types-lwt" {>= "3.0.0"}
   "mirage-block-unix"
   "mirage-block-lwt"
   "io-page"
