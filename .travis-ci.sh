@@ -5,8 +5,9 @@ eval $(opam config env)
 
 opam repo add mirage-dev .
 opam update -u
-opam install mirage
+opam depext -uivy mirage mirage-dns
 
-git clone git://github.com/mirage/mirage-skeleton
-cd mirage-skeleton
-make MODE=${MODE}
+#git clone git://github.com/mirage/mirage-skeleton
+#cd mirage-skeleton
+#make MODE=${MODE}
+
