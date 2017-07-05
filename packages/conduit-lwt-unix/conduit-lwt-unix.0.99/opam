@@ -16,12 +16,16 @@ depends: [
   "jbuilder" {build & >="1.0+beta9"}
   "conduit-lwt"
   "tls" {>="0.8.0"}
-  "lwt"
+  "lwt" {>="3.0.0"}
   "uri" {>="1.9.4"}
   "ipaddr" {>="2.8.0"}
 ]
 depopts: [
   "ssl"
   "launchd"
+]
+conflicts: [
+  "nocrypto" {<"0.5.0"}
+  "ssl" {<"0.5.3"}
 ]
 available: [ocaml-version >= "4.03.0"]
