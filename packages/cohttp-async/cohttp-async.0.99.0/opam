@@ -21,6 +21,10 @@ build: [
 build-test: [["jbuilder" "runtest" "-p" name "-j" jobs]]
 depends: [
   "jbuilder" {build & >= "1.0+beta10"}
-  "cohttp" {>="0.99"}
+  "cohttp" {>="0.99.0"}
+  "conduit-async"
+  "magic-mime"
+  "fmt"
+  "ounit" {test}
 ]
 available: [ocaml-version >= "4.03.0"]
