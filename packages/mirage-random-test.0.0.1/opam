@@ -25,5 +25,5 @@ description: """
 mirage-random-test implements `Mirage_random.C` as stub for testing.
 """
 url {
-  src: "git+https://github.com/mirage/mirage-random.git"
+  src: "git+https://github.com/mirage/mirage-random-test.git"
 }
