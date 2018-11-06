@@ -5,11 +5,11 @@ sudo: required
 dist: trusty
 env:
   matrix:
-    - OCAML_VERSION=4.03 MODE=unix
-    - OCAML_VERSION=4.03 MODE=xen
-    - OCAML_VERSION=4.03 MODE=hvt
-    - OCAML_VERSION=4.03 MODE=virtio
-    - OCAML_VERSION=4.04 MODE=unix
+    - OCAML_VERSION=4.07 MODE=unix
+    - OCAML_VERSION=4.07 MODE=hvt
+    - OCAML_VERSION=4.06 MODE=muen
+    - OCAML_VERSION=4.06 MODE=virtio
+    - OCAML_VERSION=4.05 MODE=xen
+    - OCAML_VERSION=4.05 MODE=hvt
     - OCAML_VERSION=4.04 MODE=xen
-    - OCAML_VERSION=4.04 MODE=hvt
-    - OCAML_VERSION=4.04 MODE=virtio
+    - OCAML_VERSION=4.04 MODE=unix
