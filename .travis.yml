@@ -2,7 +2,7 @@ language: c
 install: wget https://raw.githubusercontent.com/ocaml/ocaml-travisci-skeleton/master/.travis-ocaml.sh
 script: bash -ex .travis-ci.sh
 sudo: required
-dist: trusty
+dist: xenial
 env:
   global:
     - TESTS=false
