@@ -10,33 +10,30 @@ doc:          "https://docs.mirage.io"
 build: [
   ["jbuilder" "subst" "-n" name] {pinned}
   ["jbuilder" "build" "-p" name "-j" jobs]
-  ["jbuilder" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 
 depends: [
   "jbuilder" {build & >= "1.0+beta9"}
   "ocaml" {>= "4.04.2"}
-  "alcotest"     {with-test}
-  "cstruct-unix" {with-test}
   "charrua-core" {>= "0.11.0"}
+  "charrua-client-lwt" {>= "0.11.0"}
   "charrua-client" {>= "0.11.0"}
   "cstruct" {>="3.0.2"}
   "ipaddr"
   "rresult"
   "mirage-random" {>= "1.0.0"}
+  "mirage-clock"
   "duration"
-  "mirage-time-lwt"
   "logs"
-  "tcpip" {>= "3.2.0"}
+  "tcpip" {>= "3.5.0"}
   "fmt"
   "lwt"
   "mirage-types-lwt" {>="3.0.0"}
 ]
-synopsis: "A DHCP client using lwt as effectful layer"
+synopsis: "A DHCP client for MirageOS"
 description: """
-`charrua-client-lwt` extends `charrua-client` with a functor `Dhcp_client_lwt`,
-using the provided modules for timing and networking logic,
-for convenient use by a program which might wish to implement a full client.
+`charrua-client-mirage` exposes an additional `Dhcp_client_mirage` for direct use
+with the [MirageOS library operating system](https://github.com/mirage/mirage).
 """
 url {
   src: "git+https://github.com/hannesm/charrua-core.git#ipv4-signature"
