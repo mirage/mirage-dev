@@ -1,0 +1,53 @@
+opam-version: "2.0"
+name:         "mirage-entropy"
+homepage:     "https://github.com/mirage/mirage-entropy"
+dev-repo: "git+https://github.com/mirage/mirage-entropy.git"
+bug-reports:  "https://github.com/mirage/mirage-entropy/issues"
+doc:          "https://mirage.github.io/mirage-entropy/doc"
+maintainer:   "david@numm.org"
+license:      "BSD2"
+
+build: [ "dune" "build" "-p" "mirage-entropy"]
+depends: [
+  "ocaml" {>= "4.04.2"}
+  "dune" {build & >= "1.8"}
+  "topkg" {build}
+  "ocb-stubblr" {build}
+  "cstruct"
+  "lwt"
+]
+depopts: [
+  "mirage-solo5"
+  "ocaml-freestanding"
+  "mirage-xen"
+  "mirage-unix"
+]
+conflicts: [
+  "ocb-stubblr" {<"0.1.0"}
+  "cstruct" {<"1.4.0"}
+  "mirage-xen" {<"2.2.0"}
+]
+tags: [ "org:mirage"]
+available:
+  arch = "arm" | arch = "x86_32" | arch = "x86_64" | arch = "x86_64" |
+  arch = "arm64"
+synopsis: "Entropy source for MirageOS unikernels"
+description: """
+mirage-entropy implements various entropy sources for MirageOS unikernels:
+- timer based ones (see [whirlwind RNG paper](https://www.ieee-security.org/TC/SP2014/papers/Not-So-RandomNumbersinVirtualizedLinuxandtheWhirlwindRNG.pdf))
+- rdseed and rdrand (x86/x86-64 only)
+
+## Documentation
+
+[![Build Status](https://travis-ci.org/mirage/mirage-entropy.svg?branch=master)](https://travis-ci.org/mirage/mirage-entropy)
+
+* Documentation: <https://mirage.github.io/mirage-entropy/doc>
+* WWW: <https://mirage.io>
+* E-mail: <mirageos-devel@lists.xenproject.org>
+* Issues: <https://github.com/mirage/mirage-entropy/issues>
+* IRC: `#mirage` on Freenode"""
+authors: ["Hannes Mehnert" "David Kaloper" "Anil Madhavapeddy" "Dave Scott"]
+url {
+  src:
+    "git+https://github.com/dune-universe/mirage-entropy.git#variants"
+}
