@@ -5,13 +5,12 @@ homepage: "https://github.com/OCamlPro/ocplib-endian"
 build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
-remove: ["ocamlfind" "remove" "ocplib-endian"]
 depends: [
   "ocaml"
   "base-bytes"
-  "ocamlfind"
-  "cppo" {>= "1.1.0"}
-  "ocamlbuild" {build}
+  "cppo" {build & >= "1.1.0"}
+  "dune" {build}
+  "bigarray-compat"
 ]
 dev-repo: "git+https://github.com/OCamlPro/ocplib-endian.git"
 bug-reports: "https://github.com/OCamlPro/ocplib-endian/issues"
