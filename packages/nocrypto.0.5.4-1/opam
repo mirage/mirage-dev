@@ -16,20 +16,26 @@ doc: "https://mirleft.github.io/ocaml-nocrypto/"
 bug-reports: "https://github.com/mirleft/ocaml-nocrypto/issues"
 depends: [
   "ocaml" {>= "4.02.0"}
-  "dune" {build & >= "1.3.0"}
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build}
   "cpuid" {build}
+  "ocb-stubblr" {build}
+  "ppx_deriving"
   "ppx_sexp_conv"
   "ounit" {with-test}
-  "cstruct" {>= "3.0.0"}
+  "cstruct" {>= "2.4.0"}
+  "cstruct-lwt"
   "zarith"
+  "lwt"
   "sexplib"
-  "ocplib-endian"
   "bigarray-compat"
+  "mirage-no-xen" | ("mirage-xen" & "mirage-entropy" & "zarith-xen")
+  "mirage-no-solo5" | ("mirage-solo5" & "mirage-entropy" & "zarith-freestanding")
 ]
 depopts: ["cstruct-lwt" "lwt"]
 conflicts: [
   "sexplib" {= "v0.9.0"}
-  "ppx_sexp_conv" {= "v0.11.0"}
 ]
 build: [
   ["dune" "subst"] {pinned}

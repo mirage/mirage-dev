@@ -1,0 +1,25 @@
+opam-version: "2.0"
+maintainer: "anil@recoil.org"
+authors: "The MirageOS team"
+homepage: "https://github.com/mirage/mirage-platform"
+bug-reports: "https://github.com/mirage/mirage-platform/issues/"
+synopsis: "Minimal POSIX compatability layer for the MirageOS Xen backend"
+depends: [
+  "ocaml" {>= "4.01.0"}
+  "mirage-xen-minios" {>= "0.7.0"}
+  "conf-pkg-config"
+]
+substs: [
+  "xen-posix/flags/posix-cflags.tmp"
+  "xen-posix/flags/posix-libs.tmp"
+  "xen-posix/flags/minios-cflags.tmp"
+  "xen-posix/flags/minios-libs.tmp"
+  ]
+available: os = "linux"
+build: [make "xen-posix-build"]
+install: [make "xen-posix-install" "PREFIX=%{prefix}%"]
+remove: [make "xen-posix-uninstall" "PREFIX=%{prefix}%"]
+dev-repo: "git+https://github.com/mirage/mirage-platform.git"
+url {
+  src: "git+https://github.com/TheLortex/mirage-platform.git#fix-ocaml-system"
+}

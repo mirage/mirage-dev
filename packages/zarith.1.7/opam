@@ -17,11 +17,6 @@ depends: [
   "conf-gmp"
   "conf-perl" {build}
 ]
-depopts: [
-  "mirage-unix"
-  "ocaml-freestanding"
-  "mirage-xen"
-]
 synopsis:
   "Implements arithmetic and logical operations over arbitrary-precision integers"
 description: """
