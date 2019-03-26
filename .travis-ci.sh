@@ -8,7 +8,8 @@ opam update -u
 
 opam depext -uiy mirage
 
-git clone git://github.com/mirage/mirage-skeleton
+git clone git://github.com/TheLortex/mirage-skeleton
 cd mirage-skeleton
+git checkout dune-fix
 make MODE=${MODE}
 
