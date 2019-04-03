@@ -44,5 +44,5 @@ using the standard Xen RPC and event channel semantics.
 """
 url {
   src:
-    "git+https://github.com/TheLortex/mirage-block-xen.git#fix-deps"
+    "git+https://github.com/mirage/mirage-block-xen.git"
 }
