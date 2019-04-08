@@ -29,5 +29,5 @@ structures directly from OCaml.  It supports both reading and writing to these
 structures, and they are accessed via the `Bigarray` module."""
 url {
   src:
-    "git+https://github.com/TheLortex/ocaml-cstruct.git#master"
+    "git+https://github.com/TheLortex/ocaml-cstruct.git#ba_compat-v4.0.0"
 }
