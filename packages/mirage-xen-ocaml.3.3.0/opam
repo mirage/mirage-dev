@@ -22,5 +22,5 @@ install: [make "xen-ocaml-install" "PREFIX=%{prefix}%"]
 remove: [make "xen-ocaml-uninstall" "PREFIX=%{prefix}%"]
 dev-repo: "git+https://github.com/mirage/mirage-platform.git"
 url {
-  src: "git+https://github.com/TheLortex/mirage-platform.git#fix-ocaml-system"
+  src: "git+https://github.com/TheLortex/mirage-platform.git#with-flags-files"
 }
