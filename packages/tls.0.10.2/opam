@@ -28,5 +28,5 @@ depends: [
 
 tags: [ "org:mirage"]
 url {
-  src: "git+https://github.com/dune-universe/ocaml-tls.git#duniverse-master"
+  src: "git+https://github.com/dune-universe/ocaml-tls.git#duniverse-0.10.2"
 }
