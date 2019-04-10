@@ -8,11 +8,13 @@ author:       ["Hannes Mehnert" "David Kaloper" "Anil Madhavapeddy" "Dave Scott"
 maintainer:   "david@numm.org"
 license:      "BSD2"
 
-build: [ "dune" "build" "-p" name]
+build: [ "dune" "build" "-p" "mirage-entropy-xen"]
 depends: [
   "dune" {build & >= "1.9"}
   "ocaml" {>= "4.04.2"}
   "cstruct" {>= "1.4.0"}
+  "mirage-xen" {>= "2.2.0"}
+  "mirage-entropy"
   "lwt"
 ]
 tags: [ "org:mirage"]
