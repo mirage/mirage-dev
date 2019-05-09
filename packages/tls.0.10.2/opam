@@ -1,6 +1,6 @@
 opam-version: "1.2"
 homepage:     "https://github.com/mirleft/ocaml-tls"
-dev-repo:     "https://github.com/mirleft/ocaml-tls.git"
+dev-repo:     "https://github.com/dune-universe/ocaml-tls.git"
 bug-reports:  "https://github.com/mirleft/ocaml-tls/issues"
 doc:          "https://mirleft.github.io/ocaml-tls/doc"
 author:       ["David Kaloper <david@numm.org>" "Hannes Mehnert <hannes@mehnert.org>"]

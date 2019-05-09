@@ -1,48 +1,33 @@
 opam-version: "2.0"
-synopsis: "Simpler crypto"
-description: """
-nocrypto is a small cryptographic library that puts emphasis on the applicative
-style and ease of use. It includes basic ciphers (AES, 3DES, RC4), hashes (MD5,
-SHA1, SHA2), public-key primitives (RSA, DSA, DH) and a strong RNG (Fortuna).
+homepage:     "https://github.com/mirleft/ocaml-nocrypto"
+dev-repo:     "git+https://github.com/mirleft/ocaml-nocrypto.git"
+bug-reports:  "https://github.com/mirleft/ocaml-nocrypto/issues"
+doc:          "https://mirleft.github.io/ocaml-nocrypto/doc"
+authors:      ["David Kaloper <dk505@cam.ac.uk>"]
+maintainer:   "David Kaloper <dk505@cam.ac.uk>"
+license:      "ISC"
+synopsis:     "Simple crypto for the modern age"
 
-RSA timing attacks are countered by blinding. AES timing attacks are avoided by
-delegating to AES-NI."""
-maintainer: "David Kaloper <david@numm.org>"
-authors: "David Kaloper <david@numm.org>"
-license: "ISC"
-tags: "org:mirage"
-homepage: "https://github.com/mirleft/ocaml-nocrypto"
-doc: "https://mirleft.github.io/ocaml-nocrypto/"
-bug-reports: "https://github.com/mirleft/ocaml-nocrypto/issues"
+build: [ ["dune" "subst"] {pinned}
+         ["dune" "build" "-p" name "-j" jobs ]
+         ["dune" "runtest"] {with-test} ]
+
 depends: [
-  "ocaml" {>= "4.02.0"}
-  "ocamlfind" {build}
-  "ocamlbuild" {build}
-  "topkg" {build}
+  "ocaml" {>= "4.03.0"}
+  "dune" {build & >= "1.7"}
   "cpuid" {build}
-  "ocb-stubblr" {build}
-  "ppx_deriving"
-  "ppx_sexp_conv"
   "ounit" {with-test}
-  "cstruct" {>= "2.4.0"}
-  "cstruct-lwt"
+  "cstruct" {>="3.0.0"}
+  "ocplib-endian"
   "zarith"
-  "lwt"
-  "sexplib"
-  "bigarray-compat"
-  "mirage-no-xen" | ("mirage-xen" & "mirage-entropy" & "zarith-xen")
-  "mirage-no-solo5" | ("mirage-solo5" & "mirage-entropy" & "zarith-freestanding")
+  ("mirage-no-xen" | ("mirage-xen" & "zarith-xen"))
+  ("mirage-no-solo5" | ("mirage-solo5" & "zarith-freestanding"))
 ]
-depopts: ["cstruct-lwt" "lwt"]
-conflicts: [
-  "sexplib" {= "v0.9.0"}
-]
-build: [
-  ["dune" "subst"] {pinned}
-  ["dune" "build" "-p" name "-j" jobs]
-  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
-]
+
+depopts: [ "unix" "lwt" "mirage-entropy" ]
+
+conflicts: [ "mirage-xen" {< "2.2.0"} ]
 dev-repo: "git+https://github.com/mirleft/ocaml-nocrypto.git"
 url {
-  src: "git+https://github.com/dune-universe/ocaml-nocrypto.git#ba_compat"
+  src: "git+https://github.com/mirleft/ocaml-nocrypto.git#dune"
 }

@@ -7,7 +7,7 @@ authors: [
 ]
 homepage: "https://github.com/ocaml/Zarith"
 bug-reports: "https://github.com/ocaml/Zarith/issues"
-dev-repo: "git+https://github.com/ocaml/Zarith.git"
+dev-repo: "git+https://github.com/dune-universe/Zarith.git"
 build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]

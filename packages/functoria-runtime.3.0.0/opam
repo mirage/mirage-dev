@@ -7,7 +7,7 @@ authors:      [ "Thomas Gazagnaire"
                 "Gabriel Radanne" ]
 homepage:     "https://github.com/mirage/functoria"
 bug-reports:  "https://github.com/mirage/functoria/issues"
-dev-repo:     "git+https://github.com/mirage/functoria.git"
+dev-repo:     "git+https://github.com/TheLortex/functoria.git"
 doc:          "https://mirage.github.io/functoria/"
 license:      "ISC"
 tags:         ["org:mirage"]
