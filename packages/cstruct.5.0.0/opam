@@ -18,10 +18,8 @@ build: [
 depends: [
   "ocaml" {>= "4.03.0"}
   "dune" {build & >= "1.0"}
-  "sexplib" {< "v0.12"}
-  "alcotest" {with-test}
-  "cstruct"
   "bigarray-compat"
+  "alcotest" {with-test}
 ]
 synopsis: "Access C-like structures directly from OCaml"
 description: """
@@ -30,5 +28,5 @@ structures directly from OCaml.  It supports both reading and writing to these
 structures, and they are accessed via the `Bigarray` module."""
 url {
   src:
-    "git+https://github.com/TheLortex/ocaml-cstruct.git#ba_compat-v4.0.0"
+    "git+https://github.com/mirage/ocaml-cstruct.git#v5.0.0"
 }

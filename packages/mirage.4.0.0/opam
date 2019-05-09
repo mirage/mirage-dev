@@ -41,5 +41,6 @@ Amazon EC2 or Rackspace, this lets your servers run more cheaply,
 securely and with finer control than with a full software stack.
 """
 url {
-  src: "git+https://github.com/TheLortex/mirage.git#dune"
+  src:
+    "git+https://github.com/TheLortex/mirage.git#full-dune+functoria-fix"
 }

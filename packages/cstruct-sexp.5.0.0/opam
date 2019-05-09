@@ -18,16 +18,18 @@ build: [
 depends: [
   "ocaml" {>= "4.03.0"}
   "dune" {build & >= "1.0"}
-  "sexplib" {< "v0.12"}
+  "sexplib" {< "v0.13"}
+  "cstruct" {>= "3.6.0"}
   "alcotest" {with-test}
-  "bigarray-compat"
 ]
-synopsis: "Access C-like structures directly from OCaml"
+synopsis: "S-expression serialisers for C-like structures"
 description: """
 Cstruct is a library and syntax extension to make it easier to access C-like
 structures directly from OCaml.  It supports both reading and writing to these
-structures, and they are accessed via the `Bigarray` module."""
+structures, and they are accessed via the `Bigarray` module.
+
+This library provides Sexplib serialisers for the Cstruct.t values."""
 url {
   src:
-    "git+https://github.com/TheLortex/ocaml-cstruct.git#ba_compat-v4.0.0"
+    "git+https://github.com/mirage/ocaml-cstruct.git#v5.0.0"
 }
