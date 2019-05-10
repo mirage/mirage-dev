@@ -6,7 +6,7 @@ tags: "org:mirage"
 homepage: "https://github.com/mirleft/ocaml-asn1-combinators"
 doc: "https://mirleft.github.io/ocaml-asn1-combinators/doc"
 bug-reports: "https://github.com/mirleft/ocaml-asn1-combinators/issues"
-dev-repo: "git+https://github.com/mirleft/ocaml-asn1-combinators.git"
+dev-repo: "git+https://github.com/dune-universe/ocaml-asn1-combinators.git"
 synopsis: "Embed typed ASN.1 grammars in OCaml"
 description: """
 asn1-combinators is a library for expressing ASN.1 in OCaml. Skip the notation
