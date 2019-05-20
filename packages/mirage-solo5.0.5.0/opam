@@ -23,6 +23,7 @@ depends: [
   "cstruct" {>= "1.0.1"}
   "lwt" {>= "2.4.3"}
   "ocaml-freestanding" {>= "0.4.4"}
+  "mirage-os-shim"
   "logs"
   ("solo5-bindings-hvt" | "solo5-bindings-virtio" | "solo5-bindings-muen" | "solo5-bindings-genode")
 ]
