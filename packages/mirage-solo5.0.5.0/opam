@@ -2,7 +2,7 @@ opam-version: "2.0"
 maintainer:   "martin@lucina.net"
 homepage:     "https://github.com/mirage/mirage-solo5"
 bug-reports:  "https://github.com/mirage/mirage-solo5/issues/"
-dev-repo:     "git+https://github.com/dune-universe/mirage-solo5.git"
+dev-repo:     "git+https://github.com/mirage/mirage-solo5.git"
 license:      "ISC"
 authors: [
   "Anil Madhavapeddy <anil@recoil.org>"
@@ -13,18 +13,16 @@ tags: [
   "org:mirage"
 ]
 build: [
-  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" ] { os != "openbsd" }
-  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "false" ] { os = "openbsd" }
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name] {with-test}
 ]
 depends: [
-  "ocamlfind" {build}
-  "ocamlbuild" {build}
-  "topkg" {build & >= "0.7.6"}
-  "ocb-stubblr" {build}
+  "dune" {build & >= "1.0"}
   "ocaml" {>= "4.04.2"}
   "cstruct" {>= "1.0.1"}
   "lwt" {>= "2.4.3"}
-  "ocaml-freestanding" {>= "0.4.1"}
+  "ocaml-freestanding" {>= "0.4.4"}
   "logs"
   ("solo5-bindings-hvt" | "solo5-bindings-virtio" | "solo5-bindings-muen" | "solo5-bindings-genode")
 ]
