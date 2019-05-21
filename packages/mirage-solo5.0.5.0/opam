@@ -2,7 +2,6 @@ opam-version: "2.0"
 maintainer:   "martin@lucina.net"
 homepage:     "https://github.com/mirage/mirage-solo5"
 bug-reports:  "https://github.com/mirage/mirage-solo5/issues/"
-dev-repo:     "git+https://github.com/mirage/mirage-solo5.git"
 license:      "ISC"
 authors: [
   "Anil Madhavapeddy <anil@recoil.org>"
@@ -49,6 +48,7 @@ Currently this package also includes the C stubs used by the Solo5 `console`,
 The OCaml runtime and C runtime required to support it are provided separately
 by the [ocaml-freestanding](https://github.com/mirage/ocaml-freestanding) package.
 """
+dev-repo: "git+https://github.com/dune-universe/mirage-solo5.git"
 url {
   src:
     "git+https://github.com/dune-universe/mirage-solo5.git#dune+shim-virtual"

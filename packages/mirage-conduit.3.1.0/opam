@@ -28,7 +28,7 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "runtest" "-p" name] {with-test}
 ]
-dev-repo: "git+https://github.com/mirage/ocaml-conduit.git"
+dev-repo: "git+https://github.com/TheLortex/ocaml-conduit.git"
 url {
   src: "git+https://github.com/TheLortex/ocaml-conduit.git#v1.4.0+fix"
 }

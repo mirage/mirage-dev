@@ -1,6 +1,6 @@
 opam-version: "2.0"
 homepage:     "https://github.com/mirleft/ocaml-nocrypto"
-dev-repo:     "git+https://github.com/mirleft/ocaml-nocrypto.git"
+dev-repo:     "git+https://github.com/TheLortex/ocaml-nocrypto.git"
 bug-reports:  "https://github.com/mirleft/ocaml-nocrypto/issues"
 doc:          "https://mirleft.github.io/ocaml-nocrypto/doc"
 authors:      ["David Kaloper <dk505@cam.ac.uk>"]
@@ -29,5 +29,5 @@ depopts: [ "unix" "lwt" "mirage-entropy" ]
 conflicts: [ "mirage-xen" {< "2.2.0"} ]
 dev-repo: "git+https://github.com/mirleft/ocaml-nocrypto.git"
 url {
-  src: "git+https://github.com/mirleft/ocaml-nocrypto.git#dune"
+  src: "git+https://github.com/TheLortex/ocaml-nocrypto.git#dune"
 }
