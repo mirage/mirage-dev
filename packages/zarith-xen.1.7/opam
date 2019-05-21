@@ -7,7 +7,6 @@ authors: [
 ]
 homepage: "https://github.com/ocaml/Zarith"
 bug-reports: "https://github.com/ocaml/Zarith/issues"
-dev-repo: "git+https://github.com/dune-universe/Zarith.git"
 build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
@@ -25,6 +24,7 @@ description: """
 Xen implementation."""
 name: "zarith-xen"
 version: "1.7"
+dev-repo: "git+https://github.com/dune-universe/zarith.git"
 url {
   src: "git+https://github.com/dune-universe/zarith.git#variants"
 }
