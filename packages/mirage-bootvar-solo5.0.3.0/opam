@@ -18,9 +18,7 @@ build: [
 ]
 depends: [
   "ocaml" {>= "4.04.2"}
-  "ocamlfind" {build}
-  "ocamlbuild" {build}
-  "topkg" {build}
+  "dune" {build}
   "mirage-solo5" {>= "0.3.0"}
   "lwt"
   "parse-argv"
