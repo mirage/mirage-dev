@@ -19,6 +19,7 @@ depends: [
   "lwt" {>= "2.4.3"}
   "logs"
   "io-page-unix" {>= "2.0.0"}
+  "mirage-os-shim"
 ]
 tags: "org:mirage"
 synopsis: "Unix core platform libraries for MirageOS"
