@@ -6,7 +6,7 @@ eval $(opam config env)
 opam repo add mirage-dev .
 opam update -u
 
-opam depext -uiy mirage
+opam depext -uiy mirage duniverse
 
 git clone git://github.com/TheLortex/mirage-skeleton
 cd mirage-skeleton
