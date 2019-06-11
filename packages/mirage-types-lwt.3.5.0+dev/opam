@@ -48,5 +48,5 @@ for several that are left abstract in `mirage-types`:
 """
 url {
   src:
-    "git+https://github.com/TheLortex/mirage.git#full-dune+functoria-fix"
+    "git+https://github.com/TheLortex/mirage.git#full-dune"
 }

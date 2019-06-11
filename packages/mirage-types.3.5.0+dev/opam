@@ -39,5 +39,5 @@ Module type definitions for MirageOS applications
 """
 url {
   src:
-    "git+https://github.com/TheLortex/mirage.git#full-dune+functoria-fix"
+    "git+https://github.com/TheLortex/mirage.git#full-dune"
 }
