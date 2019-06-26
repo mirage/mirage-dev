@@ -16,5 +16,6 @@ steps:
   - opam update -u
   - opam exec -- ocaml -version
   - opam depext -uiy mirage duniverse
+  - eval `opam config env`
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
   - make MODE=unix -C mirage-skeleton
