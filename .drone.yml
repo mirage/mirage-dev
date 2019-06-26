@@ -15,8 +15,10 @@ steps:
   - opam repo add mirage-dev .
   - opam update -u
   - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse
+  - opam depext -uiy mirage duniverse conf-pkg-config
   - eval `opam config env`
+  - mkdir unix
+  - cd unix
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
   - make MODE=unix -C mirage-skeleton
 - name: xen
@@ -28,8 +30,10 @@ steps:
   - opam repo add mirage-dev .
   - opam update -u
   - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse
+  - opam depext -uiy mirage duniverse conf-pkg-config
   - eval `opam config env`
+  - mkdir xen
+  - cd xen
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
   - make MODE=xen -C mirage-skeleton
 - name: hvt
@@ -41,8 +45,10 @@ steps:
   - opam repo add mirage-dev .
   - opam update -u
   - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse
+  - opam depext -uiy mirage duniverse conf-pkg-config
   - eval `opam config env`
+  - mkdir hvt
+  - cd hvt
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
   - make MODE=hvt -C mirage-skeleton
 - name: muen
@@ -54,8 +60,10 @@ steps:
   - opam repo add mirage-dev .
   - opam update -u
   - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse
+  - opam depext -uiy mirage duniverse conf-pkg-config
   - eval `opam config env`
+  - mkdir muen
+  - cd muen
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
   - make MODE=muen -C mirage-skeleton
 - name: virtio
@@ -67,7 +75,17 @@ steps:
   - opam repo add mirage-dev .
   - opam update -u
   - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse
+  - opam depext -uiy mirage duniverse conf-pkg-config
   - eval `opam config env`
+  - mkdir virtio
+  - cd virtio
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
   - make MODE=virtio -C mirage-skeleton
+- name: all
+  image: ocaml/opam2:4.07
+  depends_on:
+  - unix
+  - hvt
+  - virtio
+  - muen
+  - xen
