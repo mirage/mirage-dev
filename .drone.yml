@@ -19,3 +19,55 @@ steps:
   - eval `opam config env`
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
   - make MODE=unix -C mirage-skeleton
+- name: xen
+  image: ocaml/opam2:4.07
+  commands:
+  - export OPAMYES=1
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add mirage-dev .
+  - opam update -u
+  - opam exec -- ocaml -version
+  - opam depext -uiy mirage duniverse
+  - eval `opam config env`
+  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
+  - make MODE=xen -C mirage-skeleton
+- name: hvt
+  image: ocaml/opam2:4.07
+  commands:
+  - export OPAMYES=1
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add mirage-dev .
+  - opam update -u
+  - opam exec -- ocaml -version
+  - opam depext -uiy mirage duniverse
+  - eval `opam config env`
+  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
+  - make MODE=hvt -C mirage-skeleton
+- name: muen
+  image: ocaml/opam2:4.07
+  commands:
+  - export OPAMYES=1
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add mirage-dev .
+  - opam update -u
+  - opam exec -- ocaml -version
+  - opam depext -uiy mirage duniverse
+  - eval `opam config env`
+  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
+  - make MODE=muen -C mirage-skeleton
+- name: virtio
+  image: ocaml/opam2:4.07
+  commands:
+  - export OPAMYES=1
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add mirage-dev .
+  - opam update -u
+  - opam exec -- ocaml -version
+  - opam depext -uiy mirage duniverse
+  - eval `opam config env`
+  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
+  - make MODE=virtio -C mirage-skeleton
