@@ -6,86 +6,188 @@ platform:
   arch: amd64
 
 steps:
-- name: unix
+- name: common
   image: ocaml/opam2:4.07
   commands:
-  - export OPAMYES=1
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
   - opam repo add mirage-dev .
   - opam update -u
   - opam exec -- ocaml -version
   - opam depext -uiy mirage duniverse conf-pkg-config
-  - eval `opam config env`
-  - mkdir unix
-  - cd unix
   - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
-  - make MODE=unix -C mirage-skeleton
-- name: xen
+  - mv /home/opam/.opam .opam
+
+- name: tutorial/noop
   image: ocaml/opam2:4.07
+  depends_on:
+  - common
   commands:
-  - export OPAMYES=1
-  - sudo chown -R opam .
-  - git -C /home/opam/opam-repository pull origin
-  - opam repo add mirage-dev .
-  - opam update -u
-  - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse conf-pkg-config
-  - eval `opam config env`
-  - mkdir xen
-  - cd xen
-  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
-  - make MODE=xen -C mirage-skeleton
-- name: hvt
+  - make EXAMPLE=tutorial/noop
+
+- name: stage1-noop
   image: ocaml/opam2:4.07
-  commands:
-  - export OPAMYES=1
-  - sudo chown -R opam .
-  - git -C /home/opam/opam-repository pull origin
-  - opam repo add mirage-dev .
-  - opam update -u
-  - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse conf-pkg-config
-  - eval `opam config env`
-  - mkdir hvt
-  - cd hvt
-  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
-  - make MODE=hvt -C mirage-skeleton
-- name: muen
+  depends_on:
+  - tutorial/noop
+
+- name: tutorial/noop-functor
   image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
   commands:
-  - export OPAMYES=1
-  - sudo chown -R opam .
-  - git -C /home/opam/opam-repository pull origin
-  - opam repo add mirage-dev .
-  - opam update -u
-  - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse conf-pkg-config
-  - eval `opam config env`
-  - mkdir muen
-  - cd muen
-  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
-  - make MODE=muen -C mirage-skeleton
-- name: virtio
+  - make EXAMPLE=tutorial/noop-functor
+
+- name: tutorial/hello
   image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
   commands:
-  - export OPAMYES=1
-  - sudo chown -R opam .
-  - git -C /home/opam/opam-repository pull origin
-  - opam repo add mirage-dev .
-  - opam update -u
-  - opam exec -- ocaml -version
-  - opam depext -uiy mirage duniverse conf-pkg-config
-  - eval `opam config env`
-  - mkdir virtio
-  - cd virtio
-  - git clone -b dune-fix git://github.com/TheLortex/mirage-skeleton
-  - make MODE=virtio -C mirage-skeleton
+  - make EXAMPLE=tutorial/hello
+
+- name: tutorial/hello-key
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/hello-key
+
+- name: tutorial/lwt/echo_server
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/echo_server
+
+- name: tutorial/lwt/heads1
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/heads1
+
+- name: tutorial/lwt/heads2
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/heads2
+
+- name: tutorial/lwt/timeout1
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/timeout1
+
+- name: tutorial/lwt/timeout2
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/timeout2
+
+
+- name: stage2-tutorial
+  image: ocaml/opam2:4.07
+  depends_on:
+  - tutorial/noop-functor
+  - tutorial/hello
+  - tutorial/hello-key
+  - tutorial/lwt/echo_server
+  - tutorial/lwt/heads1
+  - tutorial/lwt/heads2
+  - tutorial/lwt/timeout1
+  - tutorial/lwt/timeout2
+
+- name: device-usage/clock
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/clock
+
+- name: device-usage/conduit_server
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/conduit_server
+
+- name: device-usage/console
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/console
+
+- name: device-usage/kv_ro
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/kv_ro
+
+- name: device-usage/network
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/network
+
+- name: device-usage/ping6
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/ping6
+
+- name: device-usage/prng
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/prng
+
+- name: stage3-device-usage
+  image: ocaml/opam2:4.07
+  depends_on:
+  - device-usage/clock
+  - device-usage/conduit_server
+  - device-usage/console
+  - device-usage/kv_ro
+  - device-usage/network
+  - device-usage/ping6
+  - device-usage/prng
+
+- name: applications/dhcp
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage3-device-usage
+  commands:
+  - make EXAMPLE=applications/dhcp
+
+- name: applications/dns
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage3-device-usage
+  commands:
+  - make EXAMPLE=applications/dns
+
+- name: applications/static_website_tls
+  image: ocaml/opam2:4.07
+  depends_on:
+  - stage3-device-usage
+  commands:
+  - make EXAMPLE=applications/static_website_tls
+
+- name: stage4-applications
+  image: ocaml/opam2:4.07
+  depends_on:
+  - applications/dhcp
+  - applications/dns
+  - applications/static_website_tls
+
 - name: all
   image: ocaml/opam2:4.07
   depends_on:
-  - unix
-  - hvt
-  - virtio
-  - muen
-  - xen
+  - stage4-applications
