@@ -11,9 +11,13 @@ init:
 
 build:
 	$(MAKE) -C mirage-skeleton $(EXAMPLE)-build MODE=unix
+	$(MAKE) -C mirage-skeleton $(EXAMPLE)-clean
 	$(MAKE) -C mirage-skeleton $(EXAMPLE)-build MODE=xen
+	$(MAKE) -C mirage-skeleton $(EXAMPLE)-clean
 	$(MAKE) -C mirage-skeleton $(EXAMPLE)-build MODE=hvt
+	$(MAKE) -C mirage-skeleton $(EXAMPLE)-clean
 	$(MAKE) -C mirage-skeleton $(EXAMPLE)-build MODE=muen
+	$(MAKE) -C mirage-skeleton $(EXAMPLE)-clean
 	$(MAKE) -C mirage-skeleton $(EXAMPLE)-build MODE=virtio
 
 
