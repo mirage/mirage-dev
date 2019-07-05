@@ -43,5 +43,5 @@ repository for details.
 """
 url {
   src:
-    "git+https://github.com/TheLortex/functoria.git#no-dynlink"
+    "git+https://github.com/TheLortex/functoria.git#exit-1"
 }
