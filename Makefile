@@ -6,7 +6,7 @@ init:
 	rm -rf /home/opam/.opam
 	cp -r .opam /home/opam/.opam
 	echo `opam config env`
-	sudo apt-get install -qq -yy m4 pkg-config
+	sudo apt-get install -qq -yy m4 pkg-config binutils
 	opam config exec $(MAKE) build
 
 build:
