@@ -35,5 +35,5 @@ synopsis: "Freestanding OCaml runtime"
 description:
   "This package provides a freestanding OCaml runtime (asmrun), suitable for linking with a unikernel base layer."
 url {
-  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#lortex-master"
+  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#mirage-dune-changes"
 }
