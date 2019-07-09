@@ -53,5 +53,5 @@ by the [ocaml-freestanding](https://github.com/mirage/ocaml-freestanding) packag
 dev-repo: "git+https://github.com/dune-universe/mirage-solo5.git"
 url {
   src:
-    "git+https://github.com/dune-universe/mirage-solo5.git#separate-api"
+    "git+https://github.com/dune-universe/mirage-solo5.git#separate-api+implement-os"
 }
