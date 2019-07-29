@@ -32,5 +32,5 @@ run-test: [
 dev-repo: "git+https://github.com/avsm/duniverse.git"
 url {
   src:
-    "git+https://github.com/TheLortex/duniverse.git#download-cache"
+    "git+https://github.com/TheLortex/duniverse.git#f-a-s-t"
 }
