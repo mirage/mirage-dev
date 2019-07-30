@@ -4,7 +4,7 @@ homepage:     "https://gmplib.org/"
 license:      "GNU LGPL v3 and GNU GPL v2"
 authors:      "Torbjörn Granlund and contributors"
 
-dev-repo:     "https://gmplib.org/repo/"
+dev-repo:     "git+https://gmplib.org/repo/"
 patches: ["gmp-6a.diff"]
 build:   ["sh" "-ex" "./mirage-build.sh"]
 install: ["sh" "-ex" "./mirage-install.sh"]

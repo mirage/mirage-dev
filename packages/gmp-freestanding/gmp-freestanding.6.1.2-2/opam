@@ -5,7 +5,7 @@ license:      "GNU LGPL v3 and GNU GPL v2"
 authors:      "Torbjörn Granlund and contributors"
 bug-reports:  "mirageos-devel@lists.xenproject.org"
 
-dev-repo:     "https://gmplib.org/repo/"
+dev-repo:     "git+https://gmplib.org/repo/"
 build:   ["sh" "-ex" "./mirage-build.sh"]
 install: ["sh" "-ex" "./mirage-install.sh"]
 remove: [
