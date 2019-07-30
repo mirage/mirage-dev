@@ -26,5 +26,5 @@ depends: [
 
 tags: [ "org:mirage"]
 url {
-  src: "git://github.com/hannesm/ocaml-tls.git#future"
+  src: "git://github.com/hannesm/ocaml-tls.git#awa-future"
 }

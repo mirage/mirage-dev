@@ -45,5 +45,5 @@ conflicts: [
 tags: [ "org:mirage"]
 synopsis: "Transport Layer Security purely in OCaml"
 url {
-  src: "git://github.com/hannesm/ocaml-tls.git#future"
+  src: "git://github.com/hannesm/ocaml-tls.git#awa-future"
 }
