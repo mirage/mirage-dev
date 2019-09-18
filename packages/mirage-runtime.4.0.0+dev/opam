@@ -30,5 +30,5 @@ A bundle of useful runtime functions for applications built with MirageOS
 """
 url {
   src:
-    "git+https://github.com/TheLortex/mirage.git#full-dune"
+    "git+https://github.com/TheLortex/mirage.git#dune-backend-esp32"
 }

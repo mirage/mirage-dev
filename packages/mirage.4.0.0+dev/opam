@@ -42,5 +42,5 @@ securely and with finer control than with a full software stack.
 """
 url {
   src:
-    "git+https://github.com/TheLortex/mirage.git#full-dune"
+    "git+https://github.com/TheLortex/mirage.git#dune-backend-esp32"
 }
