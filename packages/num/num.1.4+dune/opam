@@ -23,5 +23,5 @@ conflicts: [ "base-num" ]
 synopsis:
   "The legacy Num library for arbitrary-precision integer and rational arithmetic"
 url {
- src: "git://github.com/TheLortex/num.git#fix-deps"
+ src: "git://github.com/TheLortex/num.git#fix-dep"
 }

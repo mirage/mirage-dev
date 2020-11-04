@@ -32,5 +32,5 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
 url {
- src: "git://github.com/TheLortex/ocaml-magic-mime.git#fix-deps"
+ src: "git://github.com/TheLortex/ocaml-magic-mime.git#fix-dep"
 }

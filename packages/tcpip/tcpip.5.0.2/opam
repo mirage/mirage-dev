@@ -65,5 +65,5 @@ system](https://mirage.io). It provides implementations for the following module
 * TCP
 """
 url {
- src: "git://github.com/TheLortex/mirage-tcpip.git#fix-deps"
+ src: "git://github.com/TheLortex/mirage-tcpip.git#fix-dep"
 }

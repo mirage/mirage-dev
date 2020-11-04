@@ -26,5 +26,5 @@ build: [
   ["dune" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 url {
- src: "git://github.com/TheLortex/ocaml-uri.git#fix-deps"
+ src: "git://github.com/TheLortex/ocaml-uri.git#fix-dep"
 }
