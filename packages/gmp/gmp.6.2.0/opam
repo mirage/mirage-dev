@@ -1,0 +1,19 @@
+opam-version: "2.0"
+maintainer: "Lucas Pluvinage <lucas@tarides.com>"
+authors: [ "Lucas Pluvinage" ]
+homepage: "https://github.com/TheLortex/ocaml-gmp"
+bug-reports: "https://github.com/TheLortex/ocaml-gmp/issues"
+dev-repo: "git+https://github.com/TheLortex/ocaml-gmp.git"
+build: [
+ [ "dune" "subst" ] {pinned}
+ [ "dune" "build" "-p" name "-j" jobs ]
+]
+depends: [
+  "ocaml" {>="4.05.0"}
+  "dune" {>="2.6"}
+]
+synopsis: "GMP wrapped in dune"
+description: """"""
+url {
+ src: "git://github.com/TheLortex/ocaml-gmp.git#master"
+}
