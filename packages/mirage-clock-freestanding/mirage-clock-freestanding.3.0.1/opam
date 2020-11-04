@@ -24,10 +24,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/mirage/mirage-clock.git"
 url {
-  src:
-    "https://github.com/mirage/mirage-clock/releases/download/v3.0.1/mirage-clock-v3.0.1.tbz"
-  checksum: [
-    "sha256=43e90dd608cf04e96648adbcb3da14b876f68494eeb195291b04e564e06da28a"
-    "sha512=d37e2e3514178db8056de5d4c9a4c79e2a88e0b46905dd755cd865f0801b636d942d2744d7a56457c3cfc3bc0c538e9cc3cb6b51eb542abf3dda4cf1c9aa8885"
-  ]
+  src: "git+https://github.com/TheLortex/mirage-clock.git#fix-dep"
 }
