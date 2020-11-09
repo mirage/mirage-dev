@@ -21,6 +21,9 @@ depends: [
   "mirage-runtime" {>= "3.7.0"}
   "io-page" {>= "2.3.0"}
 ]
+conflicts: [
+  "io-page-unix"
+]
 tags: "org:mirage"
 synopsis: "Unix core platform libraries for MirageOS"
 description: """
