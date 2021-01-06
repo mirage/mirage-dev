@@ -10,14 +10,15 @@ bug-reports: "https://github.com/solo5/solo5/issues"
 license: "ISC"
 dev-repo: "git+https://github.com/solo5/solo5.git"
 build: [
-  ["./configure.sh"]
-  [make "V=1" "CONFIG_HVT=" "CONFIG_VIRTIO=" "CONFIG_MUEN=" "CONFIG_GENODE=" "CONFIG_XEN="]
+  ["./configure.sh" "--prefix=%{prefix}%" "--enable-targets=spt"]
+  [make "V=1"]
 ]
-install: [make "V=1" "CONFIG_HVT=" "CONFIG_VIRTIO=" "CONFIG_MUEN=" "CONFIG_GENODE=" "CONFIG_XEN=" "install-opam-spt" "PREFIX=%{prefix}%"]
+install: [make "V=1" "install-bindings" "install-tenders"]
 depends: [
-  "conf-pkg-config"
+  "conf-pkg-config" {build & os = "linux"}
   "conf-libseccomp" {os = "linux"}
-  "solo5-headers"
+  "solo5" {= version}
+  "solo5-config-ocaml-static" {= version}
 ]
 depexts: [
   ["linux-headers"] {os-distribution = "alpine"}
@@ -27,9 +28,15 @@ depexts: [
 ]
 conflicts: [
   "ocaml-freestanding" {< "0.7.0"}
+  "solo5-bindings-hvt" {< "0.7.0"}
+  "solo5-bindings-virtio" {< "0.7.0"}
+  "solo5-bindings-muen" {< "0.7.0"}
+  "solo5-bindings-genode" {< "0.7.0"}
+  "solo5-bindings-xen" {< "0.7.0"}
 ]
 available: [
-  (arch = "x86_64" | arch = "arm64") & os = "linux"
+  (arch = "x86_64" | arch = "arm64" | arch = "ppc64") &
+  os = "linux"
 ]
 synopsis: "Solo5 sandboxed execution environment (spt target)"
 description: """
@@ -41,7 +48,8 @@ This package provides the Solo5 components needed to build
 MirageOS unikernels on the "spt" target and the "solo5-spt" tender
 binary used to run such unikernels.
 
-The "spt" target is supported on 64-bit Linux systems only."""
+The "spt" target is supported on 64-bit Linux systems, on the
+x86_64, arm64 and ppc64 architectures only."""
 url {
-  src: "git+https://github.com/TheLortex/solo5.git#mirage-4"
+  src: "git+https://github.com/mato/solo5.git#split-packages"
 }

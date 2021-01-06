@@ -10,17 +10,22 @@ bug-reports: "https://github.com/solo5/solo5/issues"
 license: "ISC"
 dev-repo: "git+https://github.com/solo5/solo5.git"
 build: [
-  ["./configure.sh"]
-  [make "V=1" "CONFIG_HVT=" "CONFIG_SPT=" "CONFIG_MUEN=" "CONFIG_GENODE=" "CONFIG_XEN="]
+  ["./configure.sh" "--prefix=%{prefix}%" "--enable-targets=virtio"]
+  [make "V=1"]
 ]
-install: [make "V=1" "CONFIG_HVT=" "CONFIG_SPT=" "CONFIG_MUEN=" "CONFIG_GENODE=" "CONFIG_XEN=" "install-opam-virtio" "PREFIX=%{prefix}%"]
+install: [make "V=1" "install-bindings"]
 depends: [
-  "conf-pkg-config"
-  "conf-libseccomp" {build & os = "linux"}
-  "solo5-headers"
+  "conf-pkg-config" {build & os = "linux"}
+  "solo5" {= version}
+  "solo5-config-ocaml-static" {= version}
 ]
 conflicts: [
   "ocaml-freestanding" {< "0.7.0"}
+  "solo5-bindings-hvt" {< "0.7.0"}
+  "solo5-bindings-spt" {< "0.7.0"}
+  "solo5-bindings-muen" {< "0.7.0"}
+  "solo5-bindings-genode" {< "0.7.0"}
+  "solo5-bindings-xen" {< "0.7.0"}
 ]
 available: [
   arch = "x86_64" &
@@ -44,5 +49,5 @@ Note that the "virtio" target provides limited support for
 current and future Solo5 features and abstractions. We recommend
 that you use the "hvt" target instead."""
 url {
-  src: "git+https://github.com/TheLortex/solo5.git#mirage-4"
+  src: "git+https://github.com/mato/solo5.git#split-packages"
 }
