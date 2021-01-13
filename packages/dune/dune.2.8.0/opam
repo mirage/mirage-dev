@@ -47,7 +47,6 @@ depends: [
   "base-unix"
   "base-threads"
 ]
-x-commit-hash: "5472766b2448308a7160dfd0fca1ec711e124a5c"
 url {
-  src: "git+https://github.com/ocaml/dune.git#master"
+  src: "git+https://github.com/ocaml/dune.git#88201dac5791dc759be59c01ba1c5ad3565205b6"
 }
