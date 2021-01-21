@@ -25,6 +25,7 @@ depends: [
   "lwt" {>= "2.4.3"}
   "metrics"
   "mirage-runtime" {>= "4.0.0"}
+  "parsexp" {>= "0.14.1"}
 ]
 
 synopsis: "Solo5 core platform libraries for MirageOS"
