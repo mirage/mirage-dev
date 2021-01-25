@@ -15,7 +15,7 @@ build: [ ["dune" "subst"] {pinned}
 depends: [
   "conf-gmp-powm-sec" {build}
   "ocaml" {>= "4.08.0"}
-  "dune" {>= "2.7"}
+  "dune" {>= "2.6"}
   "ounit" {with-test}
   "randomconv" {with-test & >= "0.1.3"}
   "cstruct" {>="3.2.0"}
@@ -23,7 +23,7 @@ depends: [
   "mirage-crypto-rng" {=version}
   "sexplib"
   "ppx_sexp_conv"
-  "zarith" {>= "1.4"}
+  "zarith" {>= "1.11"}
   "eqaf" {>= "0.7"}
   "rresult" {>= "0.6.0"}
 ]
@@ -33,7 +33,6 @@ conflicts: [
 description: """
 Mirage-crypto-pk provides public-key cryptography (RSA, DSA, DH).
 """
-x-commit-hash: "de521205fe4f14178f8e07ebce8063e355303d69"
 url {
   src:
     "https://github.com/mirage/mirage-crypto/releases/download/v0.8.9/mirage-crypto-v0.8.9.tbz"
@@ -42,3 +41,4 @@ url {
     "sha512=711a6da6ada6a9f2430b147a4b243d73cb2665391828465d2ec47e2d86e31ad04fe4afd964065e0f31ece3c1623d3ea3c81d0c9d6ccc8bebee924abea2cef554"
   ]
 }
+available: false
