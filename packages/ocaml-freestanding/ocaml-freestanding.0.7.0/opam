@@ -35,5 +35,5 @@ description:
   "This package provides a freestanding OCaml cross-compiler, suitable for linking with a unikernel base layer."
 version: "0.7.0"
 url {
-  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#mirage-4-undo-split"
+  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#mirage-4"
 }
