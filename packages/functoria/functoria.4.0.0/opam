@@ -41,5 +41,5 @@ The main use case is mirage. See the [mirage](https://github.com/mirage/mirage)
 repository for details.
 """
 url {
-  src: "git+https://github.com/TheLortex/mirage.git#mirage-4"
+  src: "git+https://github.com/TheLortex/mirage.git#mirage-4-upstream"
 }
