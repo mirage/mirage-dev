@@ -6,8 +6,8 @@ authors: [
   "Pascal Cuoq"
 ]
 homepage: "https://github.com/ocaml/Zarith"
-bug-reports: "https://github.com/ocaml/Zarith/issues"
-dev-repo: "git+https://github.com/dune-universe/Zarith.git"
+bug-reports: "https://github.com/TheLortex/Zarith/issues"
+dev-repo: "git+https://github.com/TheLortex/Zarith.git"
 doc: "https://ocaml.github.io/Zairth/"
 build: [
  [ "dune" "subst" ] {pinned}
@@ -28,5 +28,5 @@ arbitrary-precision integers. It uses GMP to efficiently implement
 arithmetic over big integers. Small integers are represented as Caml
 unboxed integers, for speed and space economy."""
 url {
- src: "git://github.com/TheLortex/Zarith.git#mirage-4"
+ src: "git://github.com/TheLortex/Zarith.git#mirage-4-simplified-configuration"
 }
