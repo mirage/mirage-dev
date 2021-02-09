@@ -19,7 +19,6 @@ depends: [
 dev-repo: "git+https://github.com/ocamllabs/opam-monorepo.git"
 build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
 flags: [ plugin ]
-x-commit-hash: "89ecff43af77614a58c11ffc565af9dd26dca555"
 url {
-  src: "git+https://github.com/TheLortex/duniverse.git#find-main-branch"
+  src: "git+https://github.com/ocamllabs/opam-monorepo.git#master"
 }
