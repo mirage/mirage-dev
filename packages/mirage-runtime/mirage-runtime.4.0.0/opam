@@ -28,6 +28,7 @@ depends: [
 ]
 conflicts: [
   "parsexp" { < "v0.14.0"}
+  "sexplib" { < "v0.14.0"}
 ]
 synopsis: "The base MirageOS runtime library, part of every MirageOS unikernel"
 description: """
