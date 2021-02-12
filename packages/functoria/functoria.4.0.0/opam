@@ -7,7 +7,6 @@ authors:      [ "Thomas Gazagnaire"
                 "Gabriel Radanne" ]
 homepage:     "https://github.com/mirage/mirage"
 bug-reports:  "https://github.com/mirage/mirage/issues"
-dev-repo:     "git+https://github.com/mirage/mirage.git"
 doc:          "https://mirage.github.io/mirage/"
 license:      "ISC"
 tags:         ["org:mirage"]
@@ -40,6 +39,7 @@ how to apply them in order to produce a complete application.
 The main use case is mirage. See the [mirage](https://github.com/mirage/mirage)
 repository for details.
 """
+dev-repo: "git+https://github.com/TheLortex/mirage.git#mirage-4"
 url {
-  src: "git+https://github.com/TheLortex/mirage.git#mirage-4-upstream"
+  src: "git+https://github.com/TheLortex/mirage.git#mirage-4"
 }

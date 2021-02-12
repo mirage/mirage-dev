@@ -3,7 +3,7 @@ maintainer:   "anil@recoil.org"
 authors:      "The MirageOS team"
 homepage:     "https://github.com/mirage/mirage-xen"
 bug-reports:  "https://github.com/mirage/mirage-xen/issues/"
-dev-repo:     "git+https://github.com/mirage/mirage-xen.git"
+dev-repo:     "git+https://github.com/TheLortex/mirage-xen.git#mirage-4"
 doc:          "https://mirage.github.io/mirage-xen/"
 license:      "ISC"
 tags:         ["org:mirage"]

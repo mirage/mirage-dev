@@ -8,7 +8,7 @@ authors: [
 homepage: "https://github.com/solo5/solo5"
 bug-reports: "https://github.com/solo5/solo5/issues"
 license: "ISC"
-dev-repo: "git+https://github.com/solo5/solo5.git"
+dev-repo: "git+https://github.com/mato/solo5.git#split-packages"
 build: [
   ["./configure.sh" "--prefix=%{prefix}%" "--enable-targets=muen"]
   [make "V=1"]

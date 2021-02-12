@@ -7,7 +7,7 @@ authors: [
 ]
 homepage: "https://github.com/ocaml/Zarith"
 bug-reports: "https://github.com/TheLortex/Zarith/issues"
-dev-repo: "git+https://github.com/TheLortex/Zarith.git"
+dev-repo: "git+https://github.com/TheLortex/Zarith.git#mirage-4-simplified-configuration"
 doc: "https://ocaml.github.io/Zairth/"
 build: [
  [ "dune" "subst" ] {pinned}

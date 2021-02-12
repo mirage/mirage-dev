@@ -3,7 +3,7 @@ maintainer: "opensource@janestreet.com"
 authors: ["Jane Street Group, LLC <opensource@janestreet.com>"]
 homepage: "https://github.com/janestreet/base"
 bug-reports: "https://github.com/janestreet/base/issues"
-dev-repo: "git+https://github.com/janestreet/base.git"
+dev-repo: "git+https://github.com/TheLortex/base.git#v0.14.1"
 doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/base/index.html"
 license: "MIT"
 build: [
