@@ -9,7 +9,7 @@ authors: [
 homepage: "https://github.com/solo5/solo5"
 bug-reports: "https://github.com/solo5/solo5/issues"
 license: "ISC"
-dev-repo: "git+https://github.com/TheLortex/solo5.git#llvm-clang-toolchain+fixes"
+dev-repo: "git+https://github.com/mato/solo5.git#wip-new-toolchain"
 build: [
   ["./configure.sh" "--prefix=%{prefix}%"]
   [make "V=1"]
@@ -18,7 +18,6 @@ install: [make "V=1" "install"]
 depends: [
   "conf-pkg-config" {build & os = "linux"}
   "conf-libseccomp" {build & os = "linux"}
-  "conf-clang"
 ]
 depexts: [
   ["linux-headers"] {os-distribution = "alpine"}
@@ -48,5 +47,5 @@ This package provides the Solo5 components needed to build and
 run MirageOS unikernels on the host system.
 """
 url {
-  src: "git+https://github.com/TheLortex/solo5.git#llvm-clang-toolchain+fixes"
+  src: "git+https://github.com/mato/solo5.git#wip-new-toolchain"
 }
