@@ -20,5 +20,5 @@ dev-repo: "git+https://github.com/ocamllabs/opam-monorepo.git"
 build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
 flags: [ plugin ]
 url {
-  src: "git+https://github.com/ocamllabs/opam-monorepo.git#master"
+  src: "git+https://github.com/ocamllabs/opam-monorepo.git#fix-lockfile-path-inference"
 }
