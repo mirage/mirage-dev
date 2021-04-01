@@ -27,5 +27,5 @@ arbitrary-precision integers. It uses GMP to efficiently implement
 arithmetic over big integers. Small integers are represented as Caml
 unboxed integers, for speed and space economy."""
 url {
- src: "git://github.com/TheLortex/Zarith.git#mirage-4-staging"
+ src: "git://github.com/TheLortex/Zarith.git#mirage-4"
 }
