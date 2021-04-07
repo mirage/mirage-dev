@@ -48,7 +48,7 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "runtest" "-p" name "-j" jobs] {with-test}
 ]
-dev-repo: "git+https://github.com/TheLortex/mirage.git#caf75a477e9b65ee5114d8f4839aeb03c1df15d8"
+dev-repo: "git+https://github.com/TheLortex/mirage.git#13384dd0eaa6ab2b61da4c0426d2d395d4953f2e"
 url {
-  src: "git+https://github.com/TheLortex/mirage.git#caf75a477e9b65ee5114d8f4839aeb03c1df15d8"
+  src: "git+https://github.com/TheLortex/mirage.git#13384dd0eaa6ab2b61da4c0426d2d395d4953f2e"
 }

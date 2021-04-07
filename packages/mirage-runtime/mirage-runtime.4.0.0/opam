@@ -35,7 +35,7 @@ A bundle of useful runtime functions for applications built with MirageOS
 """
 name: "mirage-runtime"
 version: "4.0.0"
-dev-repo: "git+https://github.com/TheLortex/mirage.git#caf75a477e9b65ee5114d8f4839aeb03c1df15d8"
+dev-repo: "git+https://github.com/TheLortex/mirage.git#13384dd0eaa6ab2b61da4c0426d2d395d4953f2e"
 url {
-  src: "git+https://github.com/TheLortex/mirage.git#caf75a477e9b65ee5114d8f4839aeb03c1df15d8"
+  src: "git+https://github.com/TheLortex/mirage.git#13384dd0eaa6ab2b61da4c0426d2d395d4953f2e"
 }
