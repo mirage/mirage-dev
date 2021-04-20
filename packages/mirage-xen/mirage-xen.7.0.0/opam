@@ -3,7 +3,7 @@ maintainer:   "anil@recoil.org"
 authors:      "The MirageOS team"
 homepage:     "https://github.com/mirage/mirage-xen"
 bug-reports:  "https://github.com/mirage/mirage-xen/issues/"
-dev-repo:     "git+https://github.com/TheLortex/mirage-xen.git#mirage-4"
+dev-repo:     "git+https://github.com/mirage/mirage-xen.git"
 doc:          "https://mirage.github.io/mirage-xen/"
 license:      "ISC"
 tags:         ["org:mirage"]
@@ -19,16 +19,17 @@ depends: [
   "lwt" {>= "2.4.3"}
   "shared-memory-ring-lwt"
   "xenstore" {>= "1.2.5"}
+  "conf-pkg-config"
   "lwt-dllist"
   "mirage-profile" {>= "0.3"}
   "io-page" {>= "2.0.0"}
   "mirage-runtime" {>= "3.7.0"}
   "logs"
   "fmt"
+  ("ocaml-freestanding" {>= "0.6.2"} & 
+  "solo5-bindings-xen" {>= "0.6.7"}) | "mirage" {>= "4.0.0"}
   "bheap" {>= "2.0.0"}
   "duration"
-  "solo5-bindings-xen" { with-test } 
-  "ocaml-freestanding" { with-test }
 ]
 available: [
   (arch = "x86_64" ) &
@@ -41,5 +42,5 @@ Xen targets, which handles the main loop and timers.  It also provides
 the low level C startup code and C stubs required by the OCaml code.
 """
 url {
-  src: "git+https://github.com/TheLortex/mirage-xen.git#mirage-4"
+  src: "git+https://github.com/TheLortex/mirage-xen.git#mirage-4-staging"
 }
