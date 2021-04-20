@@ -1,8 +1,9 @@
+
 opam-version: "2.0"
-maintainer: "martin@lucina.net"
+maintainer:   "martin@lucina.net"
 homepage:     "https://github.com/mirage/mirage-solo5"
 bug-reports:  "https://github.com/mirage/mirage-solo5/issues/"
-dev-repo:     "git+https://github.com/TheLortex/mirage-solo5.git#mirage-4"
+dev-repo:     "git+https://github.com/mirage/mirage-solo5.git"
 license:      "ISC"
 authors: [
   "Anil Madhavapeddy <anil@recoil.org>"
@@ -16,18 +17,27 @@ build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs ]
 ]
+messages: [
+  "When used with Mirage 4, this package should not be installed through opam." { mirage:version >= "4.0.0" }
+]
 depends: [
-  "dune" {>= "2.0.0"}
-  "dune-configurator"
+  "dune" {>= "2.6.0"}
   "bheap" {>= "2.0.0"}
   "ocaml" {>= "4.06.0"}
   "cstruct" {>= "1.0.1"}
   "lwt" {>= "2.4.3"}
+  ("ocaml-freestanding" {>= "0.4.5"} | "mirage" {>= "4.0.0"})
   "metrics"
-  "mirage-runtime" {>= "4.0.0"}
-  "parsexp" {>= "0.14.1"}
+  "mirage-runtime" {>= "3.7.0"}
+  "duration"
+  ("solo5-bindings-hvt" {>= "0.6.0" & < "0.7.0"} | "solo5-bindings-spt" {>= "0.6.0" & < "0.7.0"} | "solo5-bindings-virtio" {>= "0.6.0" & < "0.7.0"} | "solo5-bindings-muen" {>= "0.6.0" & < "0.7.0"} | "solo5-bindings-genode" {>= "0.6.0" & < "0.7.0"} | "mirage" {>= "4.0.0"})
 ]
-
+conflicts: [
+  "io-page" {< "2.0.0"}
+  "solo5-kernel-ukvm"
+  "solo5-kernel-virtio"
+  "solo5-kernel-muen"
+]
 synopsis: "Solo5 core platform libraries for MirageOS"
 description: """
 This package provides the MirageOS `OS` library for
@@ -42,5 +52,5 @@ The OCaml runtime and C runtime required to support it are provided separately
 by the [ocaml-freestanding](https://github.com/mirage/ocaml-freestanding) package.
 """
 url {
-  src: "git+https://github.com/TheLortex/mirage-solo5.git#mirage-4"
+  src: "git+https://github.com/TheLortex/mirage-solo5.git#mirage-4-staging"
 }
