@@ -47,5 +47,5 @@ This package provides the Solo5 components needed to build and
 run MirageOS unikernels on the host system.
 """
 url {
-  src: "git+https://github.com/TheLortex/solo5.git#new-toolchain+pkgconfig"
+  src: "git+https://github.com/TheLortex/solo5.git#43cc33d5fbd780abe7f9125b7126fa3957f06c9a"
 }
