@@ -1,3 +1,4 @@
+# Reason: bump mirage-solo5 dep: 0.7.0 -> 0.8.0
 opam-version: "2.0"
 name:         "mirage-bootvar-solo5"
 maintainer:   "Martin Lucina <martin@lucina.net>"
