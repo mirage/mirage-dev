@@ -13,12 +13,12 @@ homepage: "https://github.com/ocamllabs/opam-monorepo"
 bug-reports: "https://github.com/ocamllabs/opam-monorepo/issues"
 depends: [
   "dune" {>= "2.6"}
-  "ocaml" {>= "4.08.0" & < "4.12"}
+  "ocaml" {>= "4.08.0" & < "4.13"}
   "conf-pkg-config" {build}
 ]
 dev-repo: "git+https://github.com/TheLortex/duniverse.git"
 build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
 flags: [ plugin ]
 url {
-  src: "git+https://github.com/TheLortex/duniverse.git#7995f7d864b3fc7139c56478c5b0688fa0713dc6"
+  src: "git+https://github.com/TheLortex/duniverse.git#7c53f189cc7521ab5c62aac3ac82c73dd023638c"
 }
