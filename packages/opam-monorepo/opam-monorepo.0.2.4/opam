@@ -20,5 +20,5 @@ dev-repo: "git+https://github.com/TheLortex/duniverse.git"
 build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
 flags: [ plugin ]
 url {
-  src: "git+https://github.com/TheLortex/duniverse.git#6e823497ada87715fbfa60278858b49f9d2fee55"
+  src: "git+https://github.com/TheLortex/duniverse.git#cfdcfab9d51564e3e81eb0a9b470a8a86a812f2d"
 }
