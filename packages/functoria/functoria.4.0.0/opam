@@ -39,7 +39,7 @@ how to apply them in order to produce a complete application.
 The main use case is mirage. See the [mirage](https://github.com/mirage/mirage)
 repository for details.
 """
-dev-repo: "git+https://github.com/TheLortex/mirage.git#401dd3fc7902da188414d75211004318de6a7ea5"
+dev-repo: "git+https://github.com/TheLortex/mirage.git#34e0a4a01087ff258d0bb04b66c04ad0d57af0c4"
 url {
-  src: "git+https://github.com/TheLortex/mirage.git#401dd3fc7902da188414d75211004318de6a7ea5"
+  src: "git+https://github.com/TheLortex/mirage.git#34e0a4a01087ff258d0bb04b66c04ad0d57af0c4"
 }
