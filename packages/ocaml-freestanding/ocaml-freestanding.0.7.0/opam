@@ -5,7 +5,7 @@ homepage: "https://github.com/mirage/ocaml-freestanding"
 bug-reports: "https://github.com/mirage/ocaml-freestanding/issues/"
 license: "MIT"
 tags: "org:mirage"
-dev-repo: "git+https://github.com/TheLortex/ocaml-freestanding.git#solo5-clang"
+dev-repo: "git+https://github.com/TheLortex/ocaml-freestanding.git#cross-compiler"
 build: [
   ["./configure.sh" "--prefix=%{prefix}%" 
     "--target=x86_64-solo5-none-static" { arch = "x86_64"} 
@@ -35,5 +35,5 @@ description:
   "This package provides a freestanding OCaml cross-compiler, suitable for linking with a unikernel base layer."
 version: "0.7.0"
 url {
-  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#cross-compiler"
+  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#454adf470e9321ac001d73446929d33515a10f8a"
 }
