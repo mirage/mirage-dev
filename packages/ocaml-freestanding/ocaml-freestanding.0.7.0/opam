@@ -35,5 +35,5 @@ description:
   "This package provides a freestanding OCaml cross-compiler, suitable for linking with a unikernel base layer."
 version: "0.7.0"
 url {
-  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#454adf470e9321ac001d73446929d33515a10f8a"
+  src: "git+https://github.com/TheLortex/ocaml-freestanding.git#9ba5d880d4d6a4b01a552082a51c7761c03e813c"
 }
