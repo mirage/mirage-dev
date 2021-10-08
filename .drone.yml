@@ -1,0 +1,196 @@
+kind: pipeline
+name: amd
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: common
+  image: ocaml/opam2:4.11
+  commands:
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add dune-universe git+https://github.com/dune-universe/opam-repository.git#duniverse
+  - opam repo add mirage-dev .
+  - opam update -u
+  - opam install ocaml-freestanding solo5-bindings-xen solo5-bindings-hvt solo5-bindings-muen solo5-bindings-genode solo5-bindings-virtio solo5-bindings-spt
+  - opam exec -- ocaml -version
+  - opam pin opam-monorepo git+https://github.com/ocamllabs/duniverse#master
+  - opam depext -uiy mirage opam-monorepo conf-pkg-config
+  - git clone -b mirage-4 git://github.com/TheLortex/mirage-skeleton
+  - mv /home/opam/.opam .opam
+
+- name: tutorial/noop
+  image: ocaml/opam2:4.11
+  depends_on:
+  - common
+  commands:
+  - make EXAMPLE=tutorial/noop
+
+- name: stage1-noop
+  image: ocaml/opam2:4.11
+  depends_on:
+  - tutorial/noop
+
+- name: tutorial/noop-functor
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/noop-functor
+
+- name: tutorial/hello
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/hello
+
+- name: tutorial/hello-key
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/hello-key
+
+- name: tutorial/lwt/echo_server
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/echo_server
+
+- name: tutorial/lwt/heads1
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/heads1
+
+- name: tutorial/lwt/heads2
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/heads2
+
+- name: tutorial/lwt/timeout1
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/timeout1
+
+- name: tutorial/lwt/timeout2
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage1-noop
+  commands:
+  - make EXAMPLE=tutorial/lwt/timeout2
+
+
+- name: stage2-tutorial
+  image: ocaml/opam2:4.11
+  depends_on:
+  - tutorial/noop-functor
+  - tutorial/hello
+  - tutorial/hello-key
+  - tutorial/lwt/echo_server
+  - tutorial/lwt/heads1
+  - tutorial/lwt/heads2
+  - tutorial/lwt/timeout1
+  - tutorial/lwt/timeout2
+
+- name: device-usage/clock
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/clock
+
+- name: device-usage/conduit_server
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/conduit_server
+
+- name: device-usage/console
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/console
+
+- name: device-usage/kv_ro
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/kv_ro
+
+- name: device-usage/network
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/network
+
+- name: device-usage/ping6
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/ping6
+
+- name: device-usage/prng
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage2-tutorial
+  commands:
+  - make EXAMPLE=device-usage/prng
+
+- name: stage3-device-usage
+  image: ocaml/opam2:4.11
+  depends_on:
+  - device-usage/clock
+  - device-usage/conduit_server
+  - device-usage/console
+  - device-usage/kv_ro
+  - device-usage/network
+  - device-usage/ping6
+  - device-usage/prng
+
+- name: applications/dhcp
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage3-device-usage
+  commands:
+  - make EXAMPLE=applications/dhcp
+
+- name: applications/dns
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage3-device-usage
+  commands:
+  - make EXAMPLE=applications/dns
+
+- name: applications/static_website_tls
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage3-device-usage
+  commands:
+  - make EXAMPLE=applications/static_website_tls
+
+- name: stage4-applications
+  image: ocaml/opam2:4.11
+  depends_on:
+  - applications/dhcp
+  - applications/dns
+  - applications/static_website_tls
+
+- name: all
+  image: ocaml/opam2:4.11
+  depends_on:
+  - stage4-applications
