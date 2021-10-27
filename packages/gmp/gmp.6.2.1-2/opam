@@ -19,5 +19,5 @@ synopsis: "The GNU Multiple Precision Arithmetic Library"
 description: """Dune packaging of the GMP library, suitable for 
 cross-compilation."""
 url {
-  src: "git://github.com/mirage/ocaml-gmp.git#7d637c978a180301f893306241df992af8583cfe"
+  src: "git://github.com/TheLortex/ocaml-gmp.git#cba3af650a6aa30e1a184d8524e32d134191aa5d"
 }
