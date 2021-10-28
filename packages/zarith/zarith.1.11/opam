@@ -7,7 +7,7 @@ authors: [
 ]
 homepage: "https://github.com/ocaml/Zarith"
 bug-reports: "https://github.com/TheLortex/Zarith/issues"
-dev-repo: "git+https://github.com/TheLortex/Zarith.git#mirage-4-staging"
+dev-repo: "git+https://github.com/TheLortex/Zarith.git#mirage-4"
 doc: "https://ocaml.github.io/Zairth/"
 build: [
  [ "dune" "subst" ] {pinned}
@@ -17,7 +17,7 @@ build: [
 depends: [
   "ocaml" {>="4.05.0"}
   "dune" {>="2.7"}
-  "gmp" | "conf-gmp"
+  "gmp" {>= "6.2.1-2"} | "conf-gmp"
 ]
 synopsis:
   "Implements arithmetic and logical operations over arbitrary-precision integers"
@@ -27,5 +27,5 @@ arbitrary-precision integers. It uses GMP to efficiently implement
 arithmetic over big integers. Small integers are represented as Caml
 unboxed integers, for speed and space economy."""
 url {
- src: "git://github.com/TheLortex/Zarith.git#mirage-4"
+ src: "git://github.com/TheLortex/Zarith.git#d34db695c045099714e269065634302fdd0f0899"
 }
