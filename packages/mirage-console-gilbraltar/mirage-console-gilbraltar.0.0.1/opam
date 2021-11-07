@@ -1,0 +1,37 @@
+opam-version: "2.0"
+maintainer:    "Romain Calascibetta <romain.calascibetta@gmail.com>"
+homepage:      "https://github.com/dinosaure/gilbraltar"
+bug-reports:   "https://github.com/dinosaure/gilbraltar/issues"
+dev-repo:      "git+https://github.com/dinosaure/gilbraltar.git"
+doc:           "https://mirage.github.io/gilbraltar/"
+license:       "ISC"
+authors: [
+  "Anil Madhavapeddy <anil@recoil.org>"
+  "Dan Williams <djwillia@us.ibm.com>"
+  "Martin Lucina <martin@lucina.net>"
+]
+tags: [
+  "org:mirage"
+]
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name] {with-test}
+]
+depends: [
+  "ocaml"             {>= "4.06.0"}
+  "dune"              {>= "1.0"}
+  "mirage-console"    {>= "3.0.0"}
+  "mirage-gilbraltar"
+  "bigstringaf"
+  "cstruct"
+  "cstruct"
+  "lwt"
+  "ke"                {>= "0.4"}
+]
+synopsis: "Solo5 implementation of MirageOS console interface"
+description:
+  "This library implements the MirageOS console interface for Solo5 targets."
+url {
+  src: "git+https://github.com/dinosaure/gilbraltar.git#6329dbe0b828ed8c64191fda0e01f1e9c92bee2b"
+}
