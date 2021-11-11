@@ -10,24 +10,20 @@ tags:         ["org:mirage" "org:xapi-project"]
 doc:          "https://mirage.github.io/mirage/"
 
 build: [
-  ["dune" "subst"]
+  ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 
 depends: [
-  "ocaml" {>= "4.06.0"}
+  "ocaml" {>= "4.08.0"}
   "dune" {>= "2.0.0"}
   "ipaddr"             {>= "5.0.0"}
   "functoria-runtime"  {>= "3.0.2"}
-  "fmt"
+  "fmt" {>= "0.8.4"}
   "logs"
   "lwt" {>= "4.0.0"}
   "alcotest" {with-test}
-]
-conflicts: [
-  "parsexp" { < "v0.14.0"}
-  "sexplib" { < "v0.14.0"}
 ]
 synopsis: "The base MirageOS runtime library, part of every MirageOS unikernel"
 description: """

@@ -12,20 +12,19 @@ license:      "ISC"
 tags:         ["org:mirage"]
 
 build: [
-  ["dune" "subst"]
+  ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 
 depends: [
-  "ocaml" {>= "4.07.0"}
+  "ocaml" {>= "4.08.0"}
   "dune" {>= "2.0.0"}
   "base-unix"
   "cmdliner" {>= "0.9.8"}
   "rresult"
   "astring"
   "fmt"
-  "ocamlgraph"
   "logs"
   "bos"
   "fpath"
