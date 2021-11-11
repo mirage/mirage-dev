@@ -26,7 +26,7 @@ depends: [
   "mirage-runtime" {>= "3.7.0"}
   "logs"
   "fmt"
-  ("ocaml-freestanding" {>= "0.6.2"} & 
+  ("ocaml-freestanding" {>= "0.6.2"} &
   "solo5-bindings-xen" {>= "0.6.7"}) | "mirage-runtime" {>= "4.0.0"}
   "bheap" {>= "2.0.0"}
   "duration"
