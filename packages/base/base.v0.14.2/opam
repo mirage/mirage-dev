@@ -31,5 +31,5 @@ provided by companion libraries such as stdio:
   https://github.com/janestreet/stdio
 "
 url {
- src: "https://github.com/TheLortex/base/archive/v0.14.1.zip"
+ src: "https://github.com/TheLortex/base/archive/v0.14.2+fix-dep.zip"
 }
