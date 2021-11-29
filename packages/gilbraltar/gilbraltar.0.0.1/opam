@@ -1,0 +1,31 @@
+opam-version: "2.0"
+maintainer: "Romain Calascibetta <romain.calascibetta@gmail.com>"
+authors: "Romain Calascibetta <romain.calascibetta@gmail.com>"
+homepage: "https://github.com/dinosaure/gilbraltar"
+bug-reports: "https://github.com/dinosaure/gilbraltar/issues/"
+license: "MIT"
+tags: "org:mirage"
+dev-repo: "git+https://github.com/dinosaure/gilbraltar.git"
+build: [
+  ["sh" "-c" "cd caml ; ./configure.sh --prefix=%{prefix}%" ]
+  ["sh" "-c" "cd caml ; %{make}% -j%{jobs}%"]
+]
+install: ["sh" "-c" "cd caml ; %{make}% install" ]
+depends: [
+  "ocamlfind" {build}
+  "ocaml-src" {build}
+  "gilbraltar-toolchain" {build & = version}
+  "ocaml" {>= "4.08.0" & < "4.14.0"}
+  "dune" {with-test}
+]
+available: [
+  ( (os = "linux"   & (arch = "x86_64" | arch = "arm64"))
+  | (os = "freebsd" &  arch = "x86_64")
+  | (os = "openbsd" &  arch = "x86_64"))
+]
+synopsis: "Raspberry Pi 4 OCaml compiler"
+description:
+  "This package provides a freestanding OCaml cross-compiler, suitable for linking with a unikernel base layer for Raspberry Pi 4."
+url {
+  src: "git+https://github.com/dinosaure/gilbraltar.git#6329dbe0b828ed8c64191fda0e01f1e9c92bee2b"
+}
