@@ -43,5 +43,5 @@ Amazon EC2 or Rackspace, this lets your servers run more cheaply,
 securely and with finer control than with a full software stack.
 """
 url {
-  src: "git+https://github.com/mirage/mirage.git#2a90381f0f02cac00f44b50eed02dc11258c4090"
+  src: "git+https://github.com/mirage/mirage.git#59101cd795e741982a0a4580c113072339e1389b"
 }
