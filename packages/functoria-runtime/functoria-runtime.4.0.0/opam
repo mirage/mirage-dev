@@ -35,7 +35,7 @@ how to apply them in order to produce a complete application.
 The main use case is mirage. See the [mirage](https://github.com/mirage/mirage)
 repository for details.
 """
-dev-repo: "git+https://github.com/mirage/mirage.git#59101cd795e741982a0a4580c113072339e1389b"
+dev-repo: "git+https://github.com/mirage/mirage.git#b95d84354868e6b5ea6e91ad5a58c7b2758592e2"
 url {
-  src: "git+https://github.com/mirage/mirage.git#59101cd795e741982a0a4580c113072339e1389b"
+  src: "git+https://github.com/mirage/mirage.git#b95d84354868e6b5ea6e91ad5a58c7b2758592e2"
 }
