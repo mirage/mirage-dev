@@ -31,5 +31,5 @@ description:
   "This library implements the MirageOS console interface for Solo5 targets."
 
 url {
-  src: "git+https://github.com/TheLortex/mirage-console-solo5.git#90c742a831394ca280fa24a3ab0ad67f4e581f62"
+  src: "git+https://github.com/TheLortex/mirage-console-solo5.git#f11063204d9315aaf870601b52cb3b6322ee2644"
 }
