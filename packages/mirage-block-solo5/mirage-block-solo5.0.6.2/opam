@@ -29,5 +29,5 @@ synopsis: "Solo5 implementation of MirageOS block interface"
 description:
   "This library implements the MirageOS block interface for Solo5 targets."
 url {
-  src: "git+https://github.com/TheLortex/mirage-block-solo5.git#02268366ff843e503eba8a993f93426119917803"
+  src: "git+https://github.com/TheLortex/mirage-block-solo5.git#2e1217d5140b52e81ac7cfd87ca35252a62b0889"
 }
