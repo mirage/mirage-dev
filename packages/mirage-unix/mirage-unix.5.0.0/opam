@@ -27,7 +27,7 @@ description: """
 This package provides the MirageOS `OS` library for
 Unix targets, which handles the main loop and timers.
 """
-x-commit-hash: "56b6adee18053ae3ae6aca376920f6bb96f225fb"
+x-commit-hash: "cc1f6209581ecd19f67d5a65216c3a207e13c788"
 url {
-  src: "git+https://github.com/mirage/mirage-unix.git#b7b5eaebead17a864b53085b60351a1648ba05b1"
+  src: "git+https://github.com/mirage/mirage-unix.git#cc1f6209581ecd19f67d5a65216c3a207e13c788"
 }
