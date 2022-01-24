@@ -14,7 +14,7 @@ depends: [
   "shared-memory-ring"
   "lwt"
   "mirage-flow"
-  "mirage-console" {=version}
+  "mirage-console" {>= "5.0.0" & < "6.0.0"}
   "mirage-console-xen-proto" {=version}
   "mirage-xen" {>= "6.0.0"}
   "cstruct" {>= "6.0.0"}

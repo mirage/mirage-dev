@@ -9,7 +9,7 @@ bug-reports: "https://github.com/mirage/mirage-console/issues"
 depends: [
   "ocaml" {>= "4.08.0"}
   "dune" {>= "1.0"}
-  "mirage-console" {= version}
+  "mirage-console" {>= "5.0.0" & < "6.0.0"}
   "xenstore"
 ]
 build: [
