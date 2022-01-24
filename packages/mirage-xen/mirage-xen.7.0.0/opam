@@ -39,5 +39,5 @@ Xen targets, which handles the main loop and timers.  It also provides
 the low level C startup code and C stubs required by the OCaml code.
 """
 url {
-  src: "git+https://github.com/dinosaure/mirage-xen.git#e5d875f4efd3427aba6cd4e7ee28ba83002a5ea0"
+  src: "git+https://github.com/dinosaure/mirage-xen.git#b7b5eaebead17a864b53085b60351a1648ba05b1"
 }
