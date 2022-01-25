@@ -35,5 +35,5 @@ description:
   "This library implements the MirageOS network interface for Solo5 targets."
 
 url {
-  src: "git+https://github.com/TheLortex/mirage-net-solo5.git#6ce5164c18d0f9bcdf4d3a2050746cc9f86079d2"
+  src: "git+https://github.com/mirage/mirage-net-solo5.git#de2f676b4e8db58fc0851c1abe2f8b6b88621481"
 }

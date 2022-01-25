@@ -44,5 +44,5 @@ The OCaml runtime and C runtime required to support it are provided separately
 by the [ocaml-freestanding](https://github.com/mirage/ocaml-freestanding) package.
 """
 url {
-  src: "git+https://github.com/dinosaure/mirage-solo5.git#f5d3100f70e7343ebe8d6ff5a544fb966296c7ef"
+  src: "git+https://github.com/dinosaure/mirage-solo5.git#38ab99739b93af6e63d3ea31106572f361131fd1"
 }
