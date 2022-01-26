@@ -26,5 +26,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/mirage/mirage-clock.git"
 url {
-  src: "git+https://github.com/TheLortex/mirage-clock.git#63ee3fea3faac8d957f534f5bd5fc862f62e64a2"
+  src: "git+https://github.com/mirage/mirage-clock.git#63ee3fea3faac8d957f534f5bd5fc862f62e64a2"
 }
