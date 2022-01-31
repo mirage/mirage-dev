@@ -22,7 +22,7 @@ depends: [
   "lwt-dllist"
   "mirage-profile" {>= "0.3"}
   "io-page" {>= "2.0.0"}
-  "mirage-runtime" {>= "4.0.0"}
+  "mirage-runtime" {>= "4.0"}
   "logs"
   "fmt"
   "bheap" {>= "2.0.0"}
