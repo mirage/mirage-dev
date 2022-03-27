@@ -1,0 +1,34 @@
+opam-version: "2.0"
+maintainer:   "martin@lucina.net"
+homepage:     "https://github.com/mirage/mirage-block-solo5"
+dev-repo:     "git+https://github.com/mirage/mirage-block-solo5.git"
+bug-reports:  "https://github.com/mirage/mirage-block-solo5/issues"
+doc:           "https://mirage.github.io/mirage-block-solo5/"
+license:       "ISC"
+authors:      ["Dan Williams" "Martin Lucina"]
+tags: [
+  "org:mirage"
+]
+
+build: [
+ ["dune" "subst"] {dev}
+ ["dune" "build" "-p" name "-j" jobs]
+ ["dune" "runtest" "-p" name] {with-test}
+]
+
+depends: [
+  "ocaml" {>= "4.08.0"}
+  "dune"  {>= "2.0"}
+  "lwt" {>= "2.4.3"}
+  "cstruct" {>= "6.0.0"}
+  "mirage-block" {>= "2.0.0"}
+  "mirage-solo5" {>= "0.8.0"}
+  "fmt" {>= "0.8.7"}
+]
+synopsis: "Solo5 implementation of MirageOS block interface"
+description:
+  "This library implements the MirageOS block interface for Solo5 targets."
+url {
+  src: "git+https://github.com/mirage/mirage-block-solo5.git#7030ca85ec98844d932a97f6cd7093b283d5c662"
+}
+x-commit-hash: "7030ca85ec98844d932a97f6cd7093b283d5c662"
