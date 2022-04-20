@@ -45,5 +45,5 @@ pin-depends: [
   ]
 ]
 url {
-  src: "https://github.com/ocamllabs/opam-monorepo.git#ba43e05c1248cace89e1d68d6a41cdb93abbdf51"
+  src: "git+https://github.com/ocamllabs/opam-monorepo.git#ba43e05c1248cace89e1d68d6a41cdb93abbdf51"
 }
