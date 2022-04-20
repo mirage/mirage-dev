@@ -44,6 +44,6 @@ pin-depends: [
     "git+https://github.com/ocaml-opam/opam-0install-solver"
   ]
 ]
-url: {
+url {
   src: "https://github.com/ocamllabs/opam-monorepo.git#ba43e05c1248cace89e1d68d6a41cdb93abbdf51"
 }
