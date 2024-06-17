@@ -23,8 +23,8 @@ url {
   src:
     "https://github.com/dinosaure/mimic/releases/download/0.0.9/mimic-0.0.9.tbz"
   checksum: [
-    "sha256=8d0a6274698ee0310678156f29742b75827396cbb5c1d5d3ff0595c4b22bf92e"
-    "sha512=b5abad335846d0a9a8a7d998a913166a8cbfa4c825cbb255c17ff134363ed49aa7c25db4ff39508ae66ba9c04af3434c4e2a512a3e9d953c8e2171e533e62070"
+    "sha256=954df1ceb548a922a785440885a5d16a6af7f735d6c370ed35d339114b69e29f"
+    "sha512=dcfa1c2e13d18af3beb0ff3b080b50675ea390ba6d4d22ccb4ec5dc50ca1bc8f562e76b3a140ce155eb4862a08f94f3ac88cb650def7b2d6632db09a327c4cd2"
   ]
 }
-x-commit-hash: "0a4b7b1ef48a93f0345e516d6ca83a5a61c5eb16"
+x-commit-hash: "6dcb17bc52cf67a64fcab42d593cc42ddb3d9d1c"
